@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class Chaser : Enemy
 {
-    [SerializeField] float attackRadius;
+    [SerializeField] float attackRadius; //The radius from which the enemy would attack the target
     [SerializeField] bool showAttackRadius;
     [SerializeField] bool grounded;
     bool Grounded
@@ -45,7 +45,6 @@ public class Chaser : Enemy
     void LateUpdate()
     {
         animator.SetBool("Moving", agent.velocity.sqrMagnitude > 0);
-        
     }
 
     void OnAnimatorMove()
@@ -58,7 +57,7 @@ public class Chaser : Enemy
         }
     }
 
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         if (showAttackRadius)
         {

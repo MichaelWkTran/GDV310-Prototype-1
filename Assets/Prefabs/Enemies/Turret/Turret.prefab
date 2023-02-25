@@ -177,7 +177,7 @@ MonoBehaviour:
   health: 0
   fireRate: 0.5
   fireSpeed: 10
-  projectileLifetime: 0.5
+  projectileLifetime: 2
   projectilePrefab: {fileID: 846104440519042645, guid: 43171175b1eb2694ea29fb08824d227b,
     type: 3}
   headSlerpFactor: 5
