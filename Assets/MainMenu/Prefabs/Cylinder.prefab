@@ -98,7 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelNum: 0
-  StarterDoor: 0
+  starterDoor: 0
+  transition: {fileID: 0}
+  transitionTime: 1
 --- !u!65 &1231275191223485888
 BoxCollider:
   m_ObjectHideFlags: 0
