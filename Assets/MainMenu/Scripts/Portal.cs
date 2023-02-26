@@ -7,8 +7,8 @@ public class Portal : MonoBehaviour
 {
     public static int levelsExplored; // Amount of rooms explored in a run 
     const int maxLevelsExplored = 15; // The amount of rooms a player can explore until endgame *pressuming narrative based game
-    private int minRandomLevel = 2;   // Minimum level value 
-    private int maxRandomLevel = 5;   // Maximum level value
+    private int minRandomLevel = 0;   // Minimum level value 
+    private int maxRandomLevel = 3;   // Maximum level value
     public int LevelNum;              // Value of the room which a door leads through
     public bool starterDoor;
     public bool lockedDoor = true;
@@ -38,7 +38,7 @@ public class Portal : MonoBehaviour
     {
         if (!starterDoor && levelsExplored % 5 < 3)
         {
-            LevelNum = Random.Range(minRandomLevel, maxRandomLevel);
+           // LevelNum = Random.Range(minRandomLevel, maxRandomLevel);
         }
         //else if (!starterDoor)
         //{
