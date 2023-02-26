@@ -7,8 +7,8 @@ public class Portal : MonoBehaviour
 {
     public static int levelsExplored; // Amount of rooms explored in a run 
     const int maxLevelsExplored = 15; // The amount of rooms a player can explore until endgame *pressuming narrative based game
-    private int minRandomLevel = 0;   // Minimum level value 
-    private int maxRandomLevel = 3;   // Maximum level value
+    private int minRandomLevel = 1;   // Minimum level value 
+    private int maxRandomLevel = 4;   // Maximum level value
     public int LevelNum;              // Value of the room which a door leads through
     public bool starterDoor;
     public bool lockedDoor = true;
@@ -22,11 +22,18 @@ public class Portal : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
+        if (LevelNum >= 1)
+        {
+            SceneManager.LoadScene(LevelNum + 1); // +1 so it doesn't transport back to level hub or main menu
+        }
+        else if (LevelNum == 0) {
+            SceneManager.LoadScene("LevelHub");
+        }
+        //If we decide to use one scene instead use this code 
         //transition.SetTrigger("EndWait");
         //other.gameObject.GetComponent<CharacterController>().enabled = false;
         //other.transform.position = GameObject.Find("Starting Spot " + LevelNum).transform.position;
         //other.gameObject.GetComponent<CharacterController>().enabled = true;
-        SceneManager.LoadScene(LevelNum + 2);
     }
 
     private void LockChangeDoor()

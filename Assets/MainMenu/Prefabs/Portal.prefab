@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7236799346000128035}
   - component: {fileID: 1231275191223485888}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Portal
   m_TagString: LevelPortal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelNum: 0
   starterDoor: 0
+  lockedDoor: 1
   transition: {fileID: 0}
   transitionTime: 1
 --- !u!65 &1231275191223485888

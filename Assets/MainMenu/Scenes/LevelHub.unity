@@ -230,7 +230,7 @@ PrefabInstance:
     - target: {fileID: 30785980148511725, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_Name
-      value: Cylinder (3)
+      value: Portal 4
       objectReference: {fileID: 0}
     - target: {fileID: 260585860903008613, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
@@ -300,7 +300,7 @@ PrefabInstance:
     - target: {fileID: 7236799346000128035, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: LevelNum
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7236799346000128035, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
@@ -979,7 +979,7 @@ PrefabInstance:
     - target: {fileID: 30785980148511725, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_Name
-      value: Cylinder (1)
+      value: Portal 2
       objectReference: {fileID: 0}
     - target: {fileID: 5153755673431452872, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
@@ -1668,7 +1668,7 @@ PrefabInstance:
     - target: {fileID: 30785980148511725, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_Name
-      value: Cylinder (2)
+      value: Portal 3
       objectReference: {fileID: 0}
     - target: {fileID: 5153755673431452872, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
@@ -1813,7 +1813,7 @@ PrefabInstance:
     - target: {fileID: 30785980148511725, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_Name
-      value: Cylinder
+      value: Portal
       objectReference: {fileID: 0}
     - target: {fileID: 5153755673431452872, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
