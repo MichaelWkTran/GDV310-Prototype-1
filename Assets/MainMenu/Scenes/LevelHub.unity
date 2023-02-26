@@ -300,16 +300,21 @@ PrefabInstance:
     - target: {fileID: 7236799346000128035, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: LevelNum
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7236799346000128035, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: lockedDoor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7236799346000128035, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: StarterDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7236799346000128035, guid: cdcc0392e5225cd499df7e01a644d691,
+        type: 3}
+      propertyPath: starterDoor
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1948,6 +1953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966730664160409202, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a687bdd8d0d290d4082a54d2b52275c5, type: 3}
