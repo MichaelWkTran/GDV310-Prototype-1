@@ -10,13 +10,13 @@ public class CharacterController1 : MonoBehaviour
     public CharacterController m_Controller;
     public MouseLook m_Look;
 
-    Camera mainCamera;
+    private AudioSource dashAudio;
 
     public float moveSpeed = 4.0f;
     public Vector3 velocity;
     private Vector3 dashVel;
     public float dashSpeed;
-    public float dashTime;
+    public float dashTimer;
     public bool grounded;
     public bool sprinting;
 
@@ -38,6 +38,8 @@ public class CharacterController1 : MonoBehaviour
         play = false;
 
         canDash = true;
+
+        dashAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -88,12 +90,14 @@ public class CharacterController1 : MonoBehaviour
             }
 
             // dash
-            dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTime * Time.deltaTime);
+            dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTimer * Time.deltaTime);
 
             if (canDash && Input.GetKeyDown(KeyCode.LeftControl))
             {
                 dashVel = m_Look.transform.forward;
                 dashVel.y = 0.0f;
+
+                dashAudio.PlayOneShot(GetComponent<AudioSource>().clip);
 
                 StartCoroutine(DashCoolDown());
             }
