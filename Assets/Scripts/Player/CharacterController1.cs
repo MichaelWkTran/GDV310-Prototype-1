@@ -10,23 +10,26 @@ public class CharacterController1 : MonoBehaviour
     public CharacterController m_Controller;
     public MouseLook m_Look;
 
-    Camera mainCamera;
+    private AudioSource dashAudio;
 
     public float moveSpeed = 4.0f;
     public Vector3 velocity;
+    private Vector3 dashVel;
+    public float dashSpeed;
+    public float dashTimer;
     public bool grounded;
     public bool sprinting;
 
     public float m_Gravity = 40.0f;
     public float m_JumpSpeed = 12.0f;
     public float m_SprintModifier = 2.0f;
-    private float dashDist = 30.0f;
-    private bool isDashing = false;
-    private bool canDash = true;
+
+    private bool canDash;
 
     // player attacking
     float timer = 1.0f;
 
+    public GameObject cube;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +37,9 @@ public class CharacterController1 : MonoBehaviour
         info = true;
         play = false;
 
-        mainCamera = gameObject.GetComponent<Camera>();
+        canDash = true;
+
+        dashAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -84,16 +89,18 @@ public class CharacterController1 : MonoBehaviour
                 sprinting = false;
             }
 
-            // dashing
-            if (canDash && grounded && Input.GetKey(KeyCode.LeftControl))
-            {
-                StartCoroutine(Dash());
-                if (isDashing)
-                {
-                    z += dashDist; 
-                }
-            }
+            // dash
+            dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTimer * Time.deltaTime);
 
+            if (canDash && Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                dashVel = m_Look.transform.forward;
+                dashVel.y = 0.0f;
+
+                dashAudio.PlayOneShot(GetComponent<AudioSource>().clip);
+
+                StartCoroutine(DashCoolDown());
+            }
 
             Vector3 inputMove = new Vector3(x, 0.0f, z);
             inputMove = Quaternion.Euler(0.0f, m_Look.m_Spin, 0.0f) * inputMove;
@@ -108,6 +115,10 @@ public class CharacterController1 : MonoBehaviour
             velocity.y -= m_Gravity * Time.deltaTime;
             velocity.z = inputMove.z * moveSpeed * sprintMod;
 
+            // updated velocity to include dashing
+            velocity = velocity + dashVel * dashSpeed;
+
+            // applies movement to the controller
             m_Controller.Move(velocity * Time.deltaTime);
 
 
@@ -132,14 +143,10 @@ public class CharacterController1 : MonoBehaviour
         }
     }
 
-
-    IEnumerator Dash()
+    IEnumerator DashCoolDown()
     {
-        isDashing = true;
-        yield return new WaitForSeconds(0.2f);
-        isDashing = false;
         canDash = false;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         canDash = true;
     }
 }
