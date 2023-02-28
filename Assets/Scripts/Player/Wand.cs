@@ -11,6 +11,7 @@ public class Wand : MonoBehaviour
 
     public float forceStrength = 10.0f;
 
+
     // delay wand shoot
     float timer = 1.0f;
 
@@ -18,7 +19,7 @@ public class Wand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
