@@ -36,7 +36,7 @@ public class Wand : MonoBehaviour
             timer = 0;
         }
 
-        if (Input.GetMouseButtonDown(1) && timer > 1)
+        if (Input.GetMouseButtonDown(1) && timer > 3)
         {
             SpecialWandAttack();
             timer = 0;
@@ -48,12 +48,12 @@ public class Wand : MonoBehaviour
 
     void BasicWandAttack()
     {
-        GameObject copy = (GameObject)Instantiate(projectile, wandEnd.transform.position + (wandEnd.transform.forward * 1.001f), Quaternion.identity);
-        Rigidbody rb = copy.AddComponent(typeof(Rigidbody)) as Rigidbody;
-        rb.freezeRotation = true;
-        rb.useGravity = false;
-        rb.AddForce(player.transform.forward * forceStrength, ForceMode.Impulse);
-        Destroy(copy, 3);
+        GameObject copy = (GameObject)Instantiate(projectile, wandEnd.transform.position + (wandEnd.transform.forward * 1.001f), Quaternion.identity); // copy of basic attack object
+        Rigidbody rb = copy.AddComponent(typeof(Rigidbody)) as Rigidbody;                                                                              // add rigid body to new object
+        rb.freezeRotation = true;                                                                                                                      // no rotation
+        rb.useGravity = false;                                                                                                                         // no gravity
+        rb.AddForce(player.transform.forward * forceStrength, ForceMode.Impulse);                                                                      // add orce to rb 
+        Destroy(copy, 3);                                                                                                                              // destroy object 
     }
 
 
