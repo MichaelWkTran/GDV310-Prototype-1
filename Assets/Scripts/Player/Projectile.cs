@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Projectile : MonoBehaviour
 {
+    private Wand wandScript;
+
     public Image crossHair;
 
     // Start is called before the first frame update
@@ -16,7 +18,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(Wand.wandCharge);
     }
 
 
@@ -26,6 +28,12 @@ public class Projectile : MonoBehaviour
         {
             StartCoroutine(HitEnemy());
             StartCoroutine(ChangeColor());
+            
+            if (Wand.wandCharge < 3)
+            {
+                Wand.wandCharge++;
+            }
+            
         }
     }
 
