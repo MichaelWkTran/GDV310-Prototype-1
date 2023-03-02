@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SpecialProjectile : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -19,7 +21,7 @@ public class SpecialProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy") // enemy hit by attack
         {
             Debug.Log("BURN");
         }
