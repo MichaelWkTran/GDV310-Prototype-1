@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/MainMenu/Scenes/Menu.unity
+    guid: 2f392b5a2b996484aaecf9dad3b6e9e1
+  - enabled: 1
+    path: Assets/MainMenu/Scenes/LevelHub.unity
+    guid: 1f341607c0fac904795cc4657ccd4143
+  - enabled: 1
+    path: Assets/MainMenu/Scenes/Level 1.unity
+    guid: 08a6452cfe619a341b516f8630958d8c
+  - enabled: 1
+    path: Assets/MainMenu/Scenes/Level 2.unity
+    guid: e8953296dc7ea064180f67dc4a32ba29
+  - enabled: 1
+    path: Assets/MainMenu/Scenes/Level 3.unity
+    guid: afeca79b1cf1b4b428aafb1cbe4efaba
+  - enabled: 1
+    path: Assets/MainMenu/Scenes/Level 4.unity
+    guid: dcfcbb18c743c184a96534f8c2317c45
   m_configObjects: {}
