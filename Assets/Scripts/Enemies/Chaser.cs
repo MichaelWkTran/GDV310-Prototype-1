@@ -8,12 +8,14 @@ public class Chaser : Enemy
 {
     [SerializeField] float attackRadius; //The radius from which the enemy would attack the target
     [SerializeField] bool showAttackRadius;
+    [SerializeField] Collider hitBox;
     [SerializeField] bool grounded;
     bool Grounded
     {
         get { return grounded; }
         set
         {
+            //If grounded has changed, then trigger land or jump animation
             if (grounded != value)
             {
                 if (value) animator.CrossFade("Land", 0.1f);
@@ -24,26 +26,34 @@ public class Chaser : Enemy
     }
 
     [SerializeField] NavMeshAgent agent;
-    [SerializeField] Transform target;
     [SerializeField] Animator animator;
+    CharacterController1 player;
 
     void Update()
     {
+        //Set whether the enemy is grounded
         Grounded = !agent.isOnOffMeshLink;
-        agent.destination = target.position;
 
-        //Trigger attack animation
-        if (Grounded && (target.position - transform.position).sqrMagnitude < attackRadius * attackRadius)
+        //Dont perform any actions if the target is not defined
+        if (!FindPlayer(ref player)) return;
+
+        //Move the enemy towards the target
+        agent.destination = player.transform.position;
+
+        //Only enable hitbox when attacking
+        hitBox.enabled = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack");
+
+        //Trigger attack animation if close enough to the target
+        if (Grounded && (player.transform.position - transform.position).sqrMagnitude < attackRadius * attackRadius)
         {
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-            {
-                animator.SetTrigger("Attack");
-            }
+            //Set attack animation if the player is not in the attack animation
+            if (!hitBox.enabled) animator.SetTrigger("Attack");
         }
     }
 
     void LateUpdate()
     {
+        //Set whether the player is in idle or in moving animation
         animator.SetBool("Moving", agent.velocity.sqrMagnitude > 0);
     }
 
