@@ -31,6 +31,8 @@ public class CharacterController1 : MonoBehaviour
 
     public GameObject cube;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
