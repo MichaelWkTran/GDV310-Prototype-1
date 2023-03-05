@@ -1339,9 +1339,9 @@ MonoBehaviour:
   health: 0
   attackRadius: 2
   showAttackRadius: 1
+  hitBox: {fileID: 7520833359593509377}
   grounded: 1
   agent: {fileID: 7520833359191734129}
-  target: {fileID: 0}
   animator: {fileID: 7520833359191734131}
 --- !u!195 &7520833359191734129
 NavMeshAgent:
@@ -1426,7 +1426,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 0.5
-      value: 0.1
+      value: 0.01
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2070,6 +2070,7 @@ GameObject:
   - component: {fileID: 7520833359593509383}
   - component: {fileID: 7520833359593509382}
   - component: {fileID: 7520833359593509377}
+  - component: {fileID: 4770937003225536607}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2150,11 +2151,26 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7520833359593509379}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4770937003225536607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520833359593509379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9421443dd4fd83447b91bc7e0b450c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  isPlayerCollider: 0
+  contactBehaviour: 0
 --- !u!1 &7520833359632948772
 GameObject:
   m_ObjectHideFlags: 0
