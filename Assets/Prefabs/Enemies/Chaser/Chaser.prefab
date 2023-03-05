@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bba270d44da1244aa7b8a8dff4814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 3
   attackRadius: 2
   showAttackRadius: 1
   hitBox: {fileID: 1809554559403266624}
