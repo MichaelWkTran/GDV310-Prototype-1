@@ -30,6 +30,9 @@ public class Chaser : Enemy
     [SerializeField] Animator animator;
     CharacterController1 player;
 
+    Vector3 hitPosition;
+    Vector3 hitForce;
+
     void Start()
     {
         //Disable ragdoll
@@ -68,6 +71,34 @@ public class Chaser : Enemy
         animator.SetBool("Moving", agent.velocity.sqrMagnitude > 0);
     }
 
+    new protected void OnCollisionEnter(Collision _collision)
+    {
+        hitPosition = _collision.GetContact(0).point;
+        hitForce = _collision.impulse;
+        base.OnCollisionEnter(_collision);
+    }
+
+    new protected void OnCollisionStay(Collision _collision)
+    {
+        hitPosition = _collision.GetContact(0).point;
+        hitForce = _collision.impulse;
+        base.OnCollisionStay(_collision);
+    }
+
+    new protected void OnTriggerEnter(Collider _other)
+    {
+        hitPosition = _other.transform.position;
+        hitForce = (transform.position - _other.transform.position).normalized;
+        base.OnTriggerEnter(_other);
+    }
+
+    new protected void OnTriggerStay(Collider _other)
+    {
+        hitPosition = _other.transform.position;
+        hitForce = (transform.position - _other.transform.position).normalized;
+        base.OnTriggerStay(_other);
+    }
+
     void OnAnimatorMove()
     {
         //Apply root motion if the player is not attacking or not in landing animation
@@ -94,13 +125,16 @@ public class Chaser : Enemy
         {
             rigidBody.isKinematic = false;
             rigidBody.GetComponent<Collider>().enabled = true;
+
+            //Apply Force to ragdoll
+            rigidBody.AddForceAtPosition(hitForce*50.0f, hitPosition, ForceMode.Impulse);
         }
 
         //Disable components that would interfere with the ragdoll
         agent.enabled = false;
         animator.enabled = false;
-        hitBox.enabled = false;
         GetComponent<Collider>().enabled = false;
+        hitBox.isTrigger = false;
         enabled = false;
 
         //Destroy the Enemy

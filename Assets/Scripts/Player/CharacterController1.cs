@@ -31,6 +31,7 @@ public class CharacterController1 : MonoBehaviour
 
     public GameObject cube;
 
+    PlayerSystem playerSystem;
 
 
     // Start is called before the first frame update
@@ -42,6 +43,7 @@ public class CharacterController1 : MonoBehaviour
         canDash = true;
 
         dashAudio = GetComponent<AudioSource>();
+        playerSystem = FindObjectOfType<PlayerSystem>();
     }
 
     // Update is called once per frame
@@ -143,6 +145,34 @@ public class CharacterController1 : MonoBehaviour
         {
             velocity.y = -1.0f;
         }
+    }
+
+    void OnCollisionEnter(Collision _collision)
+    {
+        //Damage the Player
+        if (HitCollider.OnEnter(_collision.gameObject.GetComponent<HitCollider>(), true))
+            playerSystem.DamagePlayer(_collision.gameObject.GetComponent<HitCollider>().damage);
+    }
+
+    void OnCollisionStay(Collision _collision)
+    {
+        //Damage the Player
+        if (HitCollider.OnEnter(_collision.gameObject.GetComponent<HitCollider>(), true))
+            playerSystem.DamagePlayer(_collision.gameObject.GetComponent<HitCollider>().damage * Time.deltaTime);
+    }
+
+    void OnTriggerEnter(Collider _other)
+    {
+        //Damage the Player
+        if (HitCollider.OnEnter(_other.GetComponent<HitCollider>(), true))
+            playerSystem.DamagePlayer(_other.GetComponent<HitCollider>().damage);
+    }
+
+    void OnTriggerStay(Collider _other)
+    {
+        //Damage the Player
+        if (HitCollider.OnEnter(_other.GetComponent<HitCollider>(), true))
+            playerSystem.DamagePlayer(_other.GetComponent<HitCollider>().damage * Time.deltaTime);
     }
 
     IEnumerator DashCoolDown()

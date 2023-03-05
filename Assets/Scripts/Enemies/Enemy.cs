@@ -6,6 +6,34 @@ public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected float health;
 
+    protected void OnCollisionEnter(Collision _collision)
+    {
+        //Damage the Enemy
+        if (HitCollider.OnEnter(_collision.gameObject.GetComponent<HitCollider>(), false))
+            DamageEnemy(_collision.gameObject.GetComponent<HitCollider>().damage);
+    }
+
+    protected void OnCollisionStay(Collision _collision)
+    {
+        //Damage the Enemy
+        if (HitCollider.OnEnter(_collision.gameObject.GetComponent<HitCollider>(), false))
+            DamageEnemy(_collision.gameObject.GetComponent<HitCollider>().damage * Time.deltaTime);
+    }
+
+    protected void OnTriggerEnter(Collider _other)
+    {
+        //Damage the Enemy
+        if (HitCollider.OnEnter(_other.GetComponent<HitCollider>(), false))
+            DamageEnemy(_other.GetComponent<HitCollider>().damage);
+    }
+
+    protected void OnTriggerStay(Collider _other)
+    {
+        //Damage the Enemy
+        if (HitCollider.OnEnter(_other.GetComponent<HitCollider>(), false))
+            DamageEnemy(_other.GetComponent<HitCollider>().damage * Time.deltaTime);
+    }
+
     public virtual void DamageEnemy(float _value)
     {
         health -= _value;

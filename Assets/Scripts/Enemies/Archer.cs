@@ -42,9 +42,19 @@ public class Archer : Enemy
     [SerializeField] Animator animator;
     CharacterController1 player;
 
+    Vector3 hitPosition;
+    Vector3 hitForce;
+
     void Start()
     {
         StartCoroutine(RecalculateAttackRadius());
+
+        //Disable ragdoll
+        foreach (Rigidbody rigidBody in GetComponentsInChildren<Rigidbody>())
+        {
+            rigidBody.isKinematic = true;
+            rigidBody.GetComponent<Collider>().enabled = false;
+        }
     }
 
     void Update()
@@ -94,6 +104,34 @@ public class Archer : Enemy
     void LateUpdate()
     {
         animator.SetBool("Moving", agent.velocity.sqrMagnitude > 0);
+    }
+
+    new protected void OnCollisionEnter(Collision _collision)
+    {
+        hitPosition = _collision.GetContact(0).point;
+        hitForce = _collision.impulse;
+        base.OnCollisionEnter(_collision);
+    }
+
+    new protected void OnCollisionStay(Collision _collision)
+    {
+        hitPosition = _collision.GetContact(0).point;
+        hitForce = _collision.impulse;
+        base.OnCollisionStay(_collision);
+    }
+
+    new protected void OnTriggerEnter(Collider _other)
+    {
+        hitPosition = _other.transform.position;
+        hitForce = (transform.position - _other.transform.position).normalized;
+        base.OnTriggerEnter(_other);
+    }
+
+    new protected void OnTriggerStay(Collider _other)
+    {
+        hitPosition = _other.transform.position;
+        hitForce = (transform.position - _other.transform.position).normalized;
+        base.OnTriggerStay(_other);
     }
 
     void OnAnimatorMove()
@@ -147,5 +185,27 @@ public class Archer : Enemy
         projectile.GetComponent<Rigidbody>().velocity = (player.transform.position - firePoint.position).normalized * fireSpeed;
         projectile.transform.rotation = Quaternion.LookRotation(projectile.GetComponent<Rigidbody>().velocity);
         Destroy(projectile, projectileLifetime);
+    }
+
+    protected override void KillEnemy()
+    {
+        //Enable ragdoll
+        foreach (Rigidbody rigidBody in GetComponentsInChildren<Rigidbody>())
+        {
+            rigidBody.isKinematic = false;
+            rigidBody.GetComponent<Collider>().enabled = true;
+
+            //Apply Force to ragdoll
+            rigidBody.AddForceAtPosition(hitForce * 50.0f, hitPosition, ForceMode.Impulse);
+        }
+
+        //Disable components that would interfere with the ragdoll
+        agent.enabled = false;
+        animator.enabled = false;
+        GetComponent<Collider>().enabled = false;
+        enabled = false;
+
+        //Destroy the Enemy
+        Destroy(gameObject, 10.0f);
     }
 }
