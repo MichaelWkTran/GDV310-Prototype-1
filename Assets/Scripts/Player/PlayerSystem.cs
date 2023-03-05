@@ -12,7 +12,11 @@ public class PlayerSystem : MonoBehaviour
 
     //Weapon Damage Based floats
     public float mwDamage;
+    public float mwDamageNormal = 5.0f;
+    public float mwDamageBoosted = 20.0f;
     public float rwDamage;
+    public float rwDamageNormal = 5.0f;
+    public float rwDamageBoosted = 20.0f;
 
     //Weapon Active Check
     public bool wandActive;
@@ -20,14 +24,19 @@ public class PlayerSystem : MonoBehaviour
     public Image sword;
 
     //Buff timer floats
-    public float bTimer;
-    public float bTimerMax;
+    public float bTimerRegen;
+    public float bTimerRegenMax = 15.0f;
+    public float bTimerDMGBoost;
+    public float bTimerDMGBoostMax = 15.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         //Sets health to max
         pHealth = pMaxHealth;
+
+        mwDamage = mwDamageNormal;
+        rwDamage = rwDamageNormal;
 
         //Sets primary weapon to true
         wandActive = true;
@@ -41,7 +50,7 @@ public class PlayerSystem : MonoBehaviour
         {
             wandActive = !wandActive;
         }
-
+        
         //Displays active weapon
         if (wandActive)
         {
@@ -53,5 +62,53 @@ public class PlayerSystem : MonoBehaviour
             wand.enabled = false;
             sword.enabled = true;
         }
+        
+        if(bTimerDMGBoost > 0.0f)
+        {
+            mwDamage = mwDamageBoosted;
+            rwDamage = rwDamageBoosted;
+
+            bTimerDMGBoost -= 1 * Time.deltaTime;
+        }
+        else if(bTimerDMGBoost <= 0.0f)
+        {
+            mwDamage = mwDamageNormal;
+            rwDamage = rwDamageNormal;
+
+            bTimerDMGBoost = 0.0f;
+        }
+
+        if(bTimerRegen > 0.0f)
+        {
+            if(pHealth < pMaxHealth && pHealth > pMinHealth)
+            {
+                pHealth += 5 * Time.deltaTime;
+            }
+            bTimerRegen -= 1 * Time.deltaTime;
+        }
+        else if(bTimerRegen <= 0.0f)
+        {
+            bTimerRegen = 0.0f;
+        }
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "RegenBoost")
+        {
+            bTimerRegen = bTimerRegenMax;
+            Destroy(other);
+        }
+        if (other.tag == "DMGBoost")
+        {
+            bTimerDMGBoost = bTimerDMGBoostMax;
+            Destroy(other);
+        }
+    }
+
+    public void DamagePlayer(float value)
+    {
+        pHealth -= value;
     }
 }

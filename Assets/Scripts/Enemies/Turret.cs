@@ -24,7 +24,7 @@ public class Turret : Enemy
 
     [SerializeField] Transform head; //The object that tilts to look at the player
     [SerializeField] Transform firePoint; //The point from which the projectile is fired from
-    [SerializeField] Transform target; //The target that the turret looks and shoots at
+    CharacterController1 player; //The target that the turret looks and shoots at
 
     void Update()
     {
@@ -32,10 +32,10 @@ public class Turret : Enemy
         if (!Active) return;
 
         //Dont perform any actions if the target is not defined
-        if (target == null) return;
+        if (!FindPlayer(ref player)) return;
 
         //Tilt the head to look at the player
-        head.rotation = Quaternion.Slerp(head.rotation, Quaternion.LookRotation(target.position - head.position), headSlerpFactor * Time.deltaTime);
+        head.rotation = Quaternion.Slerp(head.rotation, Quaternion.LookRotation(player.transform.position - head.position), headSlerpFactor * Time.deltaTime);
 
         //Shoot the projectile
         fireTime += Time.deltaTime;
