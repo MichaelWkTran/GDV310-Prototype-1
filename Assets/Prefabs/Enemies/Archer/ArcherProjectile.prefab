@@ -130,3 +130,4 @@ MonoBehaviour:
   damage: 5
   isPlayerCollider: 0
   contactBehaviour: 2
+  destroyOnCollision: 1

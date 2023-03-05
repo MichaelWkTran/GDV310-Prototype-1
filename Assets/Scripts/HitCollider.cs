@@ -14,6 +14,7 @@ public class HitCollider : MonoBehaviour
     public float damage; //How much damage is applied to the target when hit
     public bool isPlayerCollider; //Whether the collider belongs to the player
     [SerializeField] protected ContactBehaviour contactBehaviour; //How would the hit collider behave
+    public bool destroyOnCollision; //Destroy Object when colliding with another object
 
     //OnEnter and OnStay returns true when damage should be applied in those states
     bool OnEnter()

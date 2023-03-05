@@ -70,7 +70,7 @@ public class Archer : Enemy
         float outerRadius = innerAttackRadius + outerAttackDistance;
         
         //Set the player attack idle to default
-        animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), 0.0f);
+        animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), Mathf.MoveTowards(animator.GetLayerWeight(animator.GetLayerIndex("Attack Layer")), 0, 10.0f * Time.deltaTime));
 
         //Back from the target if too close
         if (targetVector.sqrMagnitude < innerAttackRadius*innerAttackRadius)
@@ -82,7 +82,7 @@ public class Archer : Enemy
         else
         {
             //Set the player attack idle to aiming
-            animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), 1.0f);
+            animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), Mathf.MoveTowards(animator.GetLayerWeight(animator.GetLayerIndex("Attack Layer")), 1, 10.0f * Time.deltaTime));
 
             //Shoot the projectile
             fireTime += Time.deltaTime;
