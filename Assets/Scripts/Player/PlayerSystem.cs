@@ -106,4 +106,9 @@ public class PlayerSystem : MonoBehaviour
             Destroy(other);
         }
     }
+
+    public void DamagePlayer(float value)
+    {
+        pHealth -= value;
+    }
 }
