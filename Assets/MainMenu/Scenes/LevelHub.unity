@@ -991,6 +991,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4380550151606027034, guid: cdcc0392e5225cd499df7e01a644d691,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bdc93c8bedb1bb4487d9f3191bdbf71, type: 2}
     - target: {fileID: 5153755673431452872, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_RootOrder
@@ -1623,7 +1628,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ca575e5cfd37704fb56110242b171e9, type: 2}
+  - {fileID: 2100000, guid: a9dca24eeb46f8149aa675e7608026ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1680,6 +1685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4380550151606027034, guid: cdcc0392e5225cd499df7e01a644d691,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bdc93c8bedb1bb4487d9f3191bdbf71, type: 2}
     - target: {fileID: 5153755673431452872, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_RootOrder
@@ -1825,6 +1835,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 4380550151606027034, guid: cdcc0392e5225cd499df7e01a644d691,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3bdc93c8bedb1bb4487d9f3191bdbf71, type: 2}
     - target: {fileID: 5153755673431452872, guid: cdcc0392e5225cd499df7e01a644d691,
         type: 3}
       propertyPath: m_RootOrder

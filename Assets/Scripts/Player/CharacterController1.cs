@@ -126,14 +126,14 @@ public class CharacterController1 : MonoBehaviour
 
             // updated velocity to include dashing
             velocity = velocity + dashVel * dashSpeed;
-
+            Debug.Log(velocity);
             // applies movement to the controller
             m_Controller.Move(velocity * Time.deltaTime);
             if (gameObject.GetComponent<AudioSource>())
             {
                 if (!GetComponent<AudioSource>().isPlaying)
                 {
-                    if ((velocity.x != 0 || velocity.z != 0) && grounded && footstepCooldown <= 0)
+                    if ((velocity.x >= 0.01 || velocity.z >= 0.01 || velocity.x <= -0.01 || velocity.z <= -0.01) && grounded && footstepCooldown <= 0)
                     {
                         SoundManager.Play3DSound(SoundManager.Sound.Footsteps, gameObject);
                         footstepCooldown = maxFootstepCooldown;
