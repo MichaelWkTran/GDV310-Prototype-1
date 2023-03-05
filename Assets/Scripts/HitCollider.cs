@@ -88,7 +88,7 @@ public class HitCollider : MonoBehaviour
         {
             CharacterController1 player = _target.GetComponent<CharacterController1>();
             PlayerSystem playerSystem = FindObjectOfType<PlayerSystem>();
-            if (player != null && playerSystem != null) playerSystem.pHealth -= _damage;
+            if (player != null && playerSystem != null) playerSystem.DamagePlayer(_damage);
         }
     }
 }

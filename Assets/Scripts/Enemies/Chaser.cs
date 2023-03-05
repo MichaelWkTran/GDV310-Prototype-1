@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -28,6 +29,16 @@ public class Chaser : Enemy
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Animator animator;
     CharacterController1 player;
+
+    void Start()
+    {
+        //Disable ragdoll
+        foreach(Rigidbody rigidBody in GetComponentsInChildren<Rigidbody>())
+        {
+            rigidBody.isKinematic = true;
+            rigidBody.GetComponent<Collider>().enabled = false;
+        }
+    }
 
     void Update()
     {
@@ -74,5 +85,25 @@ public class Chaser : Enemy
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, attackRadius);
         }
+    }
+
+    protected override void KillEnemy() 
+    {
+        //Enable ragdoll
+        foreach (Rigidbody rigidBody in GetComponentsInChildren<Rigidbody>())
+        {
+            rigidBody.isKinematic = false;
+            rigidBody.GetComponent<Collider>().enabled = true;
+        }
+
+        //Disable components that would interfere with the ragdoll
+        agent.enabled = false;
+        animator.enabled = false;
+        hitBox.enabled = false;
+        GetComponent<Collider>().enabled = false;
+        enabled = false;
+
+        //Destroy the Enemy
+        Destroy(gameObject, 10.0f);
     }
 }
