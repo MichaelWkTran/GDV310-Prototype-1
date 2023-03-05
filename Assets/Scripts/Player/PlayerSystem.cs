@@ -9,6 +9,7 @@ public class PlayerSystem : MonoBehaviour
     public float pHealth;
     public float pMaxHealth = 100.0f;
     public float pMinHealth = 0.0f;
+    public Slider sliderHealth;
 
     //Weapon Damage Based floats
     public float mwDamage;
@@ -27,11 +28,20 @@ public class PlayerSystem : MonoBehaviour
     public float bTimerRegen;
     public float bTimerRegenMax = 15.0f;
     public float bTimerDMGBoost;
-    public float bTimerDMGBoostMax = 15.0f;
+    public float bTimerDMGBoostMax = 15.0f;     //Change some of these to private
+    public Slider sliderDValue;
+    public Slider sliderRValue;
+
+    //Weapon Attack values
+    public float specialCharge;
+    public float specialChargeMax = 100.0f;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        specialCharge = 0.0f;
+
         //Sets health to max
         pHealth = pMaxHealth;
 
@@ -40,6 +50,21 @@ public class PlayerSystem : MonoBehaviour
 
         //Sets primary weapon to true
         wandActive = true;
+    }
+
+    public void Health()
+    {
+        sliderHealth.value = pHealth;
+    }
+
+    public void DMGSlider()
+    {
+        sliderDValue.value = bTimerDMGBoost;
+    }
+
+    public void RegenSlider ()
+    {
+        sliderRValue.value = bTimerRegen;
     }
 
     // Update is called once per frame
