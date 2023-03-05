@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3666167247654539698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3666167247654539700}
+  - component: {fileID: 788430759866498288}
+  m_Layer: 0
+  m_Name: AudioAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3666167247654539700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666167247654539698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 574.758, y: 189.45778, z: 111.369255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &788430759866498288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666167247654539698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c3aa5c4d7f7b34bb1df6d177f2df7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsArray:
+  - name: Footsteps
+    audioClip: {fileID: 8300000, guid: 96ba91ae50207ed479afdca37f4c49d2, type: 3}
+    sound: 0
+    soundType: 1
+    volume: 1
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: NormalAttack
+    audioClip: {fileID: 8300000, guid: e3163238dd6550145b7358a2d8ee1f60, type: 3}
+    sound: 1
+    soundType: 1
+    volume: 0.145
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: 'SpecialAttack '
+    audioClip: {fileID: 8300000, guid: d212176de3e77a743aaca3c5981f8f05, type: 3}
+    sound: 2
+    soundType: 1
+    volume: 1
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: Dash
+    audioClip: {fileID: 8300000, guid: 481f3d300d307524dba5a6498428d09a, type: 3}
+    sound: 3
+    soundType: 1
+    volume: 1
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: EnemyHit
+    audioClip: {fileID: 8300000, guid: 481f3d300d307524dba5a6498428d09a, type: 3}
+    sound: 4
+    soundType: 2
+    volume: 0
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: EnemyDie
+    audioClip: {fileID: 8300000, guid: e73c9041daf7366469f7fb9706909e42, type: 3}
+    sound: 5
+    soundType: 2
+    volume: 0
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: PlayerDie
+    audioClip: {fileID: 8300000, guid: e73c9041daf7366469f7fb9706909e42, type: 3}
+    sound: 6
+    soundType: 2
+    volume: 0
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  - name: MenuOptionSelected
+    audioClip: {fileID: 8300000, guid: 481f3d300d307524dba5a6498428d09a, type: 3}
+    sound: 7
+    soundType: 1
+    volume: 0
+    length: 0
+    looped: 0
+    source: {fileID: 0}
+  musicArray:
+  - name: Menu
+    audioClip: {fileID: 8300000, guid: ad8c0a55250469d4ba16d52fc26e6ca2, type: 3}
+    sound: 8
+    soundType: 0
+    volume: 1
+    length: 0
+    looped: 1
+    source: {fileID: 0}
+  - name: Battle One
+    audioClip: {fileID: 8300000, guid: dbe8d27adec621743bda1dbe6fb8acbd, type: 3}
+    sound: 8
+    soundType: 0
+    volume: 1
+    length: 0
+    looped: 1
+    source: {fileID: 0}
+  - name: Non Battle One
+    audioClip: {fileID: 8300000, guid: ad8c0a55250469d4ba16d52fc26e6ca2, type: 3}
+    sound: 8
+    soundType: 0
+    volume: 1
+    length: 0
+    looped: 1
+    source: {fileID: 0}

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CharacterController1 : MonoBehaviour
 {
+    //Sound Stuff
+    float maxFootstepCooldown = 0.5f;
+    public float footstepCooldown = 0.5f;
+
     bool info;
     public static bool play;    
 
@@ -101,7 +105,8 @@ public class CharacterController1 : MonoBehaviour
                 dashVel = m_Look.transform.forward;
                 dashVel.y = 0.0f;
 
-                dashAudio.PlayOneShot(GetComponent<AudioSource>().clip);
+                //dashAudio.PlayOneShot(GetComponent<AudioSource>().clip);
+                SoundManager.Play3DSound(SoundManager.Sound.Dash, gameObject);
 
                 StartCoroutine(DashCoolDown());
             }
@@ -124,8 +129,22 @@ public class CharacterController1 : MonoBehaviour
 
             // applies movement to the controller
             m_Controller.Move(velocity * Time.deltaTime);
+            if (gameObject.GetComponent<AudioSource>())
+            {
+                if (!GetComponent<AudioSource>().isPlaying)
+                {
+                    if ((velocity.x != 0 || velocity.z != 0) && grounded && footstepCooldown <= 0)
+                    {
+                        SoundManager.Play3DSound(SoundManager.Sound.Footsteps, gameObject);
+                        footstepCooldown = maxFootstepCooldown;
+                    }
+                    else
+                    {
+                        footstepCooldown -= Time.deltaTime;
+                    }
+                }
 
-
+            }
             // player attack
             timer += Time.deltaTime;
         }

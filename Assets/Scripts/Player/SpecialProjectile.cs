@@ -9,7 +9,7 @@ public class SpecialProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SoundManager.Play3DSound(SoundManager.Sound.SpecialAttack, gameObject);
     }
 
     // Update is called once per frame
