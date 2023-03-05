@@ -5,6 +5,7 @@ using UnityEngine;
 public static class SoundManager
 {
     ///Remind me that pausing game should stop all sound but music 
+    ///Also remind me that looping sounds might be needed 
     /// <summary>
     /// Sound Manager handles the playing of all sounds in the game, 
     /// Global sound values stored here too
@@ -116,8 +117,18 @@ public static class SoundManager
         }
     }
 
+    public static void PlayLoopingSound()
+    {
+
+    }
+
+    public static void StopAllSounds()
+    {
+        
+    }
+
     /// <summary>
-    /// Play a sound without a specific location 
+    /// Play a sound without a specific location, mostly for UI + non-diagetic sounds 
     /// </summary>
     /// <param name="sound"></param>
     public static void PlaySound(Sound sound, GameObject sourceObj)
@@ -135,6 +146,10 @@ public static class SoundManager
         }
     }
 
+    /// <summary>
+    /// Plays a sound for checking audio levels
+    /// </summary>
+    /// <param name="sound"></param>
     public static void PlayCheckSound(Sound sound)
     {
         if (AudioAssets.instance.soundsArray.Length > (int)sound && (int)sound >= 0) //Checks if the sound the system is trying to use is stored in the audio assets 
