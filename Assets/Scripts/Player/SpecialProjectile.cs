@@ -21,7 +21,7 @@ public class SpecialProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy") // enemy hit by attack
         {
             Debug.Log("BURN");
         }
