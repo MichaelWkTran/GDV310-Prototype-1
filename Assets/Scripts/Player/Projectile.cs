@@ -32,8 +32,11 @@ public class Projectile : MonoBehaviour
             if (Wand.wandCharge < 3)
             {
                 Wand.wandCharge++;
-            }
-            
+            } 
+        }
+        else if (other.tag != "SpecialProj") // destroy gameObject when collides with anything but special projectile
+        {
+            Destroy(gameObject);
         }
     }
 
