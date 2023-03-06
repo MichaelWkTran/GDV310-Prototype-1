@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
     protected void OnCollisionStay(Collision _collision)
     {
         //Damage the Enemy
-        if (HitCollider.OnEnter(_collision.gameObject.GetComponent<HitCollider>(), false))
+        if (HitCollider.OnStay(_collision.gameObject.GetComponent<HitCollider>(), false))
             DamageEnemy(_collision.gameObject.GetComponent<HitCollider>().damage * Time.deltaTime);
     }
 
@@ -30,7 +30,7 @@ public abstract class Enemy : MonoBehaviour
     protected void OnTriggerStay(Collider _other)
     {
         //Damage the Enemy
-        if (HitCollider.OnEnter(_other.GetComponent<HitCollider>(), false))
+        if (HitCollider.OnStay(_other.GetComponent<HitCollider>(), false))
             DamageEnemy(_other.GetComponent<HitCollider>().damage * Time.deltaTime);
     }
 

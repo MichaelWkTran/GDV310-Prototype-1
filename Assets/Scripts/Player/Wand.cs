@@ -66,6 +66,6 @@ public class Wand : MonoBehaviour
     {
         GameObject copy = (GameObject)Instantiate(specialProjectile, new Vector3(player.transform.position.x, player.transform.position.y - 1.0f, player.transform.position.z), Quaternion.identity);
         Destroy(copy, 5);
-        Wand.wandCharge = 0;
+        //Wand.wandCharge = 0;
     }
 }

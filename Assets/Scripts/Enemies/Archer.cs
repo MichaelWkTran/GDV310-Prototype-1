@@ -68,36 +68,31 @@ public class Archer : Enemy
         //Set player to target variables
         Vector3 targetVector = player.transform.position - transform.position;
         float outerRadius = innerAttackRadius + outerAttackDistance;
-        
-        //Set the player attack idle to default
-        animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), Mathf.MoveTowards(animator.GetLayerWeight(animator.GetLayerIndex("Attack Layer")), 0, 10.0f * Time.deltaTime));
 
         //Back from the target if too close
-        if (targetVector.sqrMagnitude < innerAttackRadius*innerAttackRadius)
-            agent.destination = transform.position - (targetVector.normalized * 5.0f);
+        if (targetVector.sqrMagnitude < innerAttackRadius * innerAttackRadius) agent.destination = transform.position - (targetVector.normalized * 5.0f);
         //Approach the target if too far away
-        else if (targetVector.sqrMagnitude > outerRadius*outerRadius)
-            agent.destination = player.transform.position;
+        else if (targetVector.sqrMagnitude > outerRadius * outerRadius) agent.destination = player.transform.position;
+        //Stop the enemy from moving
+        else agent.destination = transform.position;
+
+        //Make the enemy look at the target
+        Vector3 lookVector = targetVector; lookVector.y = 0.0f;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookVector), lookAtSlerpFactor * Time.deltaTime);
+
+        //Set the player attack idle to default
+        if (targetVector.sqrMagnitude < (innerAttackRadius * innerAttackRadius) - 5.0f) animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), Mathf.MoveTowards(animator.GetLayerWeight(animator.GetLayerIndex("Attack Layer")), 0, 10.0f * Time.deltaTime));
+        //Set the player attack idle to aiming
+        else animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), Mathf.MoveTowards(animator.GetLayerWeight(animator.GetLayerIndex("Attack Layer")), 1, 10.0f * Time.deltaTime));
+
         //Attack the target if in range
-        else
+        //Shoot the projectile
+        fireTime += Time.deltaTime;
+        if (fireTime > fireRate)
         {
-            //Set the player attack idle to aiming
-            animator.SetLayerWeight(animator.GetLayerIndex("Attack Layer"), Mathf.MoveTowards(animator.GetLayerWeight(animator.GetLayerIndex("Attack Layer")), 1, 10.0f * Time.deltaTime));
+            fireTime = 0;
+            animator.SetTrigger("Attack");
 
-            //Shoot the projectile
-            fireTime += Time.deltaTime;
-            if (fireTime > fireRate)
-            {
-                fireTime = 0;
-                animator.SetTrigger("Attack");
-            }
-
-            //Stop the enemy from moving
-            agent.destination = transform.position;
-
-            //Make the enemy look at the target
-            Vector3 lookVector = targetVector; lookVector.y = 0.0f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookVector), lookAtSlerpFactor * Time.deltaTime);
         }
     }
 
