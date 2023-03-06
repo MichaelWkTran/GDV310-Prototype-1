@@ -97,12 +97,15 @@ public class CharacterController1 : MonoBehaviour
                 sprinting = false;
             }
 
+            Vector3 inputMove = new Vector3(x, 0.0f, z);
+            inputMove = Quaternion.Euler(0.0f, m_Look.m_Spin, 0.0f) * inputMove;
+
             // dash
             dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTimer * Time.deltaTime);
 
             if (canDash && Input.GetKeyDown(KeyCode.LeftControl))
             {
-                dashVel = m_Look.transform.forward;
+                dashVel = inputMove;
                 dashVel.y = 0.0f;
 
                 //dashAudio.PlayOneShot(GetComponent<AudioSource>().clip);
@@ -111,8 +114,7 @@ public class CharacterController1 : MonoBehaviour
                 StartCoroutine(DashCoolDown());
             }
 
-            Vector3 inputMove = new Vector3(x, 0.0f, z);
-            inputMove = Quaternion.Euler(0.0f, m_Look.m_Spin, 0.0f) * inputMove;
+            
 
             float sprintMod = 1.0f;
             if (sprinting && !(Input.GetKey(KeyCode.S))) // calculating sprint. can't sprint while moving backwards

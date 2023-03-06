@@ -2979,6 +2979,7 @@ MonoBehaviour:
   damage: 5
   isPlayerCollider: 0
   contactBehaviour: 0
+  destroyOnCollision: 0
 --- !u!65 &1809554559403266624
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -53,7 +53,7 @@ public class Wand : MonoBehaviour
 
     void BasicWandAttack()
     {
-        GameObject copy = (GameObject)Instantiate(projectile, wandEnd.transform.position + (wandEnd.transform.forward * 1.001f), Quaternion.identity); // copy of basic attack object
+        GameObject copy = (GameObject)Instantiate(projectile, wandEnd.transform.position + (wandEnd.transform.forward * 1.01f), Quaternion.identity); // copy of basic attack object
         Rigidbody rb = copy.AddComponent(typeof(Rigidbody)) as Rigidbody;                                                                              // add rigid body to new object
         rb.freezeRotation = true;                                                                                                                      // no rotation
         rb.useGravity = false;                                                                                                                         // no gravity
@@ -66,6 +66,6 @@ public class Wand : MonoBehaviour
     {
         GameObject copy = (GameObject)Instantiate(specialProjectile, new Vector3(player.transform.position.x, player.transform.position.y - 1.0f, player.transform.position.z), Quaternion.identity);
         Destroy(copy, 5);
-        Wand.wandCharge = 0;
+        //Wand.wandCharge = 0;
     }
 }

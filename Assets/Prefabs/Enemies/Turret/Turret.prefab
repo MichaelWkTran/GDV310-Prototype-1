@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   fireRate: 0.5
-  fireSpeed: 10
+  fireSpeed: 50
   projectileLifetime: 2
   projectilePrefab: {fileID: 846104440519042645, guid: 43171175b1eb2694ea29fb08824d227b,
     type: 3}
@@ -184,4 +184,3 @@ MonoBehaviour:
   active: 1
   head: {fileID: 1823316474742396075}
   firePoint: {fileID: 1823316473458385353}
-  target: {fileID: 0}
