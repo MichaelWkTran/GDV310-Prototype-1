@@ -64,8 +64,17 @@ public class Wand : MonoBehaviour
 
     void SpecialWandAttack()
     {
+        StartCoroutine(ScreenShake());
         GameObject copy = (GameObject)Instantiate(specialProjectile, new Vector3(player.transform.position.x, player.transform.position.y - 1.0f, player.transform.position.z), Quaternion.identity);
         Destroy(copy, 5);
-        //Wand.wandCharge = 0;
+        Wand.wandCharge = 0;
+    }
+
+
+    IEnumerator ScreenShake()
+    {
+        CameraShake.isShaking = true;
+        yield return new WaitForSeconds(2);
+        CameraShake.isShaking = false;
     }
 }
