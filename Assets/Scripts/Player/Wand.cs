@@ -9,6 +9,7 @@ public class Wand : MonoBehaviour
     public GameObject specialProjectile;
     public GameObject player;
     public GameObject wandEnd;
+    public Animator animator;
 
     public Image specialChargeBar;
 
@@ -53,6 +54,7 @@ public class Wand : MonoBehaviour
 
     void BasicWandAttack()
     {
+        animator.SetTrigger("Attack");
         GameObject copy = (GameObject)Instantiate(projectile, wandEnd.transform.position + (wandEnd.transform.forward * 1.001f), Quaternion.identity); // copy of basic attack object
         Rigidbody rb = copy.AddComponent(typeof(Rigidbody)) as Rigidbody;                                                                              // add rigid body to new object
         rb.freezeRotation = true;                                                                                                                      // no rotation
@@ -64,6 +66,7 @@ public class Wand : MonoBehaviour
 
     void SpecialWandAttack()
     {
+        animator.SetTrigger("Attack");
         GameObject copy = (GameObject)Instantiate(specialProjectile, new Vector3(player.transform.position.x, player.transform.position.y - 1.0f, player.transform.position.z), Quaternion.identity);
         Destroy(copy, 5);
         //Wand.wandCharge = 0;

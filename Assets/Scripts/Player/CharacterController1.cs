@@ -15,6 +15,7 @@ public class CharacterController1 : MonoBehaviour
     public MouseLook m_Look;
 
     private AudioSource dashAudio;
+    public Animator animator;
 
     public float moveSpeed = 4.0f;
     public Vector3 velocity;
@@ -164,6 +165,12 @@ public class CharacterController1 : MonoBehaviour
         {
             velocity.y = -1.0f;
         }
+    }
+
+    void LateUpdate()
+    {
+        animator.SetBool("Moving", velocity.x != 0 || velocity.z != 0);
+        animator.SetBool("Grounded", grounded);
     }
 
     void OnCollisionEnter(Collision _collision)
