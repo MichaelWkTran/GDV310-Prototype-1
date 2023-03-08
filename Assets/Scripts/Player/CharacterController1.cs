@@ -15,6 +15,7 @@ public class CharacterController1 : MonoBehaviour
     public MouseLook m_Look;
 
     private AudioSource dashAudio;
+    public Animator animator;
 
     public float moveSpeed = 4.0f;
     public Vector3 velocity;
@@ -22,7 +23,7 @@ public class CharacterController1 : MonoBehaviour
     public float dashSpeed;
     public float dashTimer;
     public bool grounded;
-    public bool sprinting;
+    //public bool sprinting;
 
     public float m_Gravity = 40.0f;
     public float m_JumpSpeed = 12.0f;
@@ -88,14 +89,14 @@ public class CharacterController1 : MonoBehaviour
             }
 
             // sprinting
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                sprinting = true;
-            }
-            else
-            {
-                sprinting = false;
-            }
+            //if (Input.GetKey(KeyCode.LeftShift))
+            //{
+            //    sprinting = true;
+            //}
+            //else
+            //{
+            //    sprinting = false;
+            //}
 
             Vector3 inputMove = new Vector3(x, 0.0f, z);
             inputMove = Quaternion.Euler(0.0f, m_Look.m_Spin, 0.0f) * inputMove;
@@ -103,7 +104,7 @@ public class CharacterController1 : MonoBehaviour
             // dash
             dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTimer * Time.deltaTime);
 
-            if (canDash && Input.GetKeyDown(KeyCode.LeftControl))
+            if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
             {
                 dashVel = inputMove;
                 dashVel.y = 0.0f;
@@ -117,10 +118,10 @@ public class CharacterController1 : MonoBehaviour
             
 
             float sprintMod = 1.0f;
-            if (sprinting && !(Input.GetKey(KeyCode.S))) // calculating sprint. can't sprint while moving backwards
-            {
-                sprintMod = 2.0f;
-            }
+            //if (sprinting && !(Input.GetKey(KeyCode.S))) // calculating sprint. can't sprint while moving backwards
+            //{
+            //    sprintMod = 2.0f;
+            //}
 
             velocity.x = inputMove.x * moveSpeed * sprintMod;
             velocity.y -= m_Gravity * Time.deltaTime;
@@ -129,8 +130,10 @@ public class CharacterController1 : MonoBehaviour
             // updated velocity to include dashing
             velocity = velocity + dashVel * dashSpeed;
             Debug.Log(velocity);
+
             // applies movement to the controller
             m_Controller.Move(velocity * Time.deltaTime);
+
             if (gameObject.GetComponent<AudioSource>())
             {
                 if (!GetComponent<AudioSource>().isPlaying)
@@ -166,6 +169,12 @@ public class CharacterController1 : MonoBehaviour
         {
             velocity.y = -1.0f;
         }
+    }
+
+    void LateUpdate()
+    {
+        animator.SetBool("Moving", velocity.x != 0 || velocity.z != 0);
+        animator.SetBool("Grounded", grounded);
     }
 
     void OnCollisionEnter(Collision _collision)

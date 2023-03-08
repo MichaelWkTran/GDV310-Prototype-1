@@ -17,7 +17,7 @@ public class CameraShake : MonoBehaviour
     {
         if (isShaking)
         {
-            StartCoroutine(ScreenShake(0.15f, 0.4f));
+            StartCoroutine(ScreenShake(0.15f, 0.3f));
         }
     }
 
