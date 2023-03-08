@@ -34,10 +34,10 @@ public class Projectile : MonoBehaviour
                 Wand.wandCharge++;
             } 
         }
-        else if (other.tag != "SpecialProj") // destroy gameObject when collides with anything but special projectile
-        {
-            Destroy(gameObject);
-        }
+        //else if (other.tag != "SpecialProj") // destroy gameObject when collides with anything but special projectile
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
 

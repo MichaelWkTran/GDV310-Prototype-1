@@ -21,6 +21,7 @@ public class Turret : Enemy
             //Play activate or disable animation
         }
     }
+    [SerializeField] bool lookAtPlayer = true;
 
     [SerializeField] Transform head; //The object that tilts to look at the player
     [SerializeField] Transform firePoint; //The point from which the projectile is fired from
@@ -35,7 +36,7 @@ public class Turret : Enemy
         if (!FindPlayer(ref player)) return;
 
         //Tilt the head to look at the player
-        head.rotation = Quaternion.Slerp(head.rotation, Quaternion.LookRotation(player.transform.position - head.position), headSlerpFactor * Time.deltaTime);
+        if (lookAtPlayer) head.rotation = Quaternion.Slerp(head.rotation, Quaternion.LookRotation(player.transform.position - head.position), headSlerpFactor * Time.deltaTime);
 
         //Shoot the projectile
         fireTime += Time.deltaTime;
