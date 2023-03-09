@@ -11,7 +11,10 @@ public class Wand : MonoBehaviour
     public GameObject wandEnd;
     public Animator animator;
 
-    public Image specialChargeBar;
+    public float charge;
+    public Slider sliderBar;
+
+    //public Image specialChargeBar;
 
     public float forceStrength = 10.0f; // strength of force
 
@@ -47,8 +50,8 @@ public class Wand : MonoBehaviour
             SpecialWandAttack();
             timer = 0;
         }
-
-        specialChargeBar.fillAmount = Wand.wandCharge / wandChargeMax;
+        sliderBar.value = charge;
+        //specialChargeBar.fillAmount = Wand.wandCharge / wandChargeMax;
     }
 
 

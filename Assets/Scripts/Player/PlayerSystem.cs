@@ -78,6 +78,9 @@ public class PlayerSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Health();
+        RegenSlider();
+        DMGSlider();
         //Changes weapon active
         if (Input.GetMouseButtonDown(0))
         {
