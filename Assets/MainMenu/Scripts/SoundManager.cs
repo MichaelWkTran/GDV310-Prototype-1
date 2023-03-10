@@ -123,10 +123,6 @@ public static class SoundManager
         }
     }
 
-    public static void PlayLoopingSound()
-    {
-
-    }
 
     /// <summary>
     /// Play a sound without a specific location, mostly for UI + non-diagetic sounds 
