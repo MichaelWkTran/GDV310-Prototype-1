@@ -26,7 +26,6 @@ public class MouseLook : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-
     }
 
     void Start()
@@ -38,7 +37,7 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !PauseMenu.isPaused)
         {
             m_CursorLocked = !m_CursorLocked;
             LockCursor();
