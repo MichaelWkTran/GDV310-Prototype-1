@@ -29,8 +29,11 @@ public class PlayerSystem : MonoBehaviour
     public float bTimerRegenMax = 15.0f;
     public float bTimerDMGBoost;
     public float bTimerDMGBoostMax = 15.0f;     //Change some of these to private
+
+
     public Slider sliderDValue;
     public Slider sliderRValue;
+    public Slider sliderJValue;
 
     //Weapon Attack values
     public float specialCharge;
@@ -67,9 +70,17 @@ public class PlayerSystem : MonoBehaviour
         sliderRValue.value = bTimerRegen;
     }
 
+    public void JumpSlider()
+    {
+        sliderJValue.value = bTimerRegen;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        Health();
+        RegenSlider();
+        DMGSlider();
         //Changes weapon active
         if (Input.GetMouseButtonDown(0))
         {
