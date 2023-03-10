@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerSystem : MonoBehaviour
 {
@@ -82,6 +84,9 @@ public class PlayerSystem : MonoBehaviour
         RegenSlider();
         DMGSlider();
         DashSlider();
+
+        RestartLevel(); // check whether player has no health
+
         //Changes weapon active
         //if (Input.GetMouseButtonDown(0))
         //{
@@ -147,5 +152,14 @@ public class PlayerSystem : MonoBehaviour
     public void DamagePlayer(float value)
     {
         pHealth -= value;
+    }
+
+
+    public void RestartLevel()
+    {
+        if (pHealth <= 0)
+        {
+            SceneManager.LoadScene(sceneBuildIndex: 2); // reload level
+        }
     }
 }
