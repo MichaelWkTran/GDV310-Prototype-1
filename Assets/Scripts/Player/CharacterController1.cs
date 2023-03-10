@@ -34,8 +34,6 @@ public class CharacterController1 : MonoBehaviour
     // player attacking
     float timer = 1.0f;
 
-    public GameObject cube;
-
     PlayerSystem playerSystem;
 
 
