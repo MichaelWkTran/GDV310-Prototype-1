@@ -27,9 +27,9 @@ public class CharacterController1 : MonoBehaviour
 
     public float m_Gravity = 40.0f;
     public float m_JumpSpeed = 12.0f;
-    public float m_SprintModifier = 2.0f;
 
     private bool canDash;
+    public static float dashValue;
 
     // player attacking
     float timer = 1.0f;
@@ -46,6 +46,7 @@ public class CharacterController1 : MonoBehaviour
         play = false;
 
         canDash = true;
+        dashValue = 100.0f;
 
         dashAudio = GetComponent<AudioSource>();
         playerSystem = FindObjectOfType<PlayerSystem>();
@@ -84,15 +85,6 @@ public class CharacterController1 : MonoBehaviour
                 velocity.y = m_JumpSpeed;
             }
 
-            // sprinting
-            //if (Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    sprinting = true;
-            //}
-            //else
-            //{
-            //    sprinting = false;
-            //}
 
             Vector3 inputMove = new Vector3(x, 0.0f, z);
             inputMove = Quaternion.Euler(0.0f, m_Look.m_Spin, 0.0f) * inputMove;
@@ -105,19 +97,18 @@ public class CharacterController1 : MonoBehaviour
                 dashVel = inputMove;
                 dashVel.y = 0.0f;
 
-                //dashAudio.PlayOneShot(GetComponent<AudioSource>().clip);
                 SoundManager.Play3DSound(SoundManager.Sound.Dash, gameObject);
 
                 StartCoroutine(DashCoolDown());
+                StartCoroutine(DashValueIncrease());
+
+                dashValue = 0.0f;
             }
 
             
 
             float sprintMod = 1.0f;
-            //if (sprinting && !(Input.GetKey(KeyCode.S))) // calculating sprint. can't sprint while moving backwards
-            //{
-            //    sprintMod = 2.0f;
-            //}
+            
 
             velocity.x = inputMove.x * moveSpeed * sprintMod;
             velocity.y -= m_Gravity * Time.deltaTime;
@@ -201,10 +192,20 @@ public class CharacterController1 : MonoBehaviour
             playerSystem.DamagePlayer(_other.GetComponent<HitCollider>().damage * Time.deltaTime);
     }
 
-    IEnumerator DashCoolDown()
+    IEnumerator DashCoolDown() // coroutine for dash cooldown
     {
         canDash = false;
         yield return new WaitForSeconds(3);
         canDash = true;
+    }
+
+
+    IEnumerator DashValueIncrease() // coroutine to charge up dash slider
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            dashValue += 10;
+            yield return new WaitForSeconds(0.3f);
+        }   
     }
 }
