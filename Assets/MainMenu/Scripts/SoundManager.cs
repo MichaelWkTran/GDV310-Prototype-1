@@ -193,36 +193,3 @@ public static class SoundManager
         }
     }
 }
-
-
-//    public void Stop(string name)
-//    {
-//        Sound sound = Array.Find(sounds, s => s.name == name);
-
-//        if (sound == null)
-//        {
-//            Debug.LogError("Sound " + name + " Not Found!");
-//            return;
-//        }
-
-//        sound.source.Stop();
-//    }
-
-//    private static bool CanPlaySound(Sound sound)
-//    {
-//        if (soundTimerDictionary.ContainsKey(sound.name))
-//        {
-//            float lastTimePlayed = soundTimerDictionary[sound.name];
-
-//            if (lastTimePlayed + sound.clip.length < Time.time)
-//            {
-//                soundTimerDictionary[sound.name] = Time.time;
-//                return true;
-//            }
-
-//            return false;
-//        }
-
-//        return true;
-//    }
-//}
