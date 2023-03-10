@@ -15,7 +15,10 @@ public static class SoundManager
     public static float musicVolume = 1f;
     public static float soundVolume = 1f;
     public static float enemyVolume = 1f;
+    
     public static GameObject musicPlayer;
+    public static bool volumeUpdated = false;
+
 
     public enum Sound //All the different versions of the sounds
     {
@@ -61,6 +64,7 @@ public static class SoundManager
 
     public static void SoundEffectVolumeChange(float newValue)
     {
+        volumeUpdated = true;
         soundVolume = newValue;
         for (int i = 0; i < AudioAssets.instance.soundsArray.Length; i++)
         {
@@ -71,6 +75,7 @@ public static class SoundManager
 
     public static void EnemyVolumeChange(float newValue)
     {
+        volumeUpdated = true;
         enemyVolume = newValue;
         for (int i = 0; i < AudioAssets.instance.soundsArray.Length; i++)
         {
@@ -107,9 +112,10 @@ public static class SoundManager
     {
         if ((AudioAssets.instance.musicArray.Length > (int)music) && ((int)music >= 0)) //Checks if the music exists 
         {
-            AudioSource musicSource = musicPlayer.GetComponent<AudioSource>();
-            AudioAssets.instance.musicArray[(int)music].SoundGenerated(musicSource);
-            musicSource.Play();
+           AudioSource musicSource = musicPlayer.GetComponent<AudioSource>();
+           AudioAssets.instance.musicArray[(int)music].SoundGenerated(musicSource);
+           musicSource.ignoreListenerPause = true; 
+           musicSource.Play();
         }
         else
         {
@@ -120,11 +126,6 @@ public static class SoundManager
     public static void PlayLoopingSound()
     {
 
-    }
-
-    public static void StopAllSounds()
-    {
-        
     }
 
     /// <summary>
@@ -143,6 +144,7 @@ public static class SoundManager
             AudioAssets.instance.soundsArray[(int)sound].SoundGenerated(audioSource);
             Debug.Log(audioSource.volume);
             audioSource.PlayOneShot(audioSource.clip);
+            GameObject.Destroy(audioSource, AudioAssets.instance.soundsArray[(int)sound].length);
         }
     }
 
@@ -150,17 +152,17 @@ public static class SoundManager
     /// Plays a sound for checking audio levels
     /// </summary>
     /// <param name="sound"></param>
-    public static void PlayCheckSound(Sound sound)
-    {
-        if (AudioAssets.instance.soundsArray.Length > (int)sound && (int)sound >= 0) //Checks if the sound the system is trying to use is stored in the audio assets 
-        {
-            AudioSource audioSource = musicPlayer.AddComponent<AudioSource>();
-            AudioAssets.instance.soundsArray[(int)sound].SoundGenerated(audioSource);
-            Debug.Log(audioSource.volume);
-            audioSource.PlayOneShot(audioSource.clip);
-            GameObject.Destroy(audioSource, AudioAssets.instance.soundsArray[(int)sound].length);
-        }
-    }
+    //public static void PlayCheckSound(Sound sound)
+    //{
+    //    if (AudioAssets.instance.soundsArray.Length > (int)sound && (int)sound >= 0) //Checks if the sound the system is trying to use is stored in the audio assets 
+    //    {
+    //        AudioSource audioSource = musicPlayer.AddComponent<AudioSource>();
+    //        AudioAssets.instance.soundsArray[(int)sound].SoundGenerated(audioSource);
+    //        Debug.Log(audioSource.volume);
+    //        audioSource.PlayOneShot(audioSource.clip);
+    //        GameObject.Destroy(audioSource, AudioAssets.instance.soundsArray[(int)sound].length);
+    //    }
+    //}
     /// <summary>
     /// Play a sound with a specific location
     /// </summary>

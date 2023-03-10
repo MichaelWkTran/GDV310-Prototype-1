@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    public static int levelsExplored; // Amount of rooms explored in a run 
+    public static int checkpointUnlocked; // Highest Checkpoint cleared
     const int maxLevelsExplored = 15; // The amount of rooms a player can explore until endgame *pressuming narrative based game
-    private int minRandomLevel = 1;   // Minimum level value 
-    private int maxRandomLevel = 4;   // Maximum level value
+    //private int minRandomLevel = 1;   // Minimum level value 
+    //private int maxRandomLevel = 4;   // Maximum level value
     public int LevelNum;              // Value of the room which a portal leads through
     public bool starterPortal;        // Whether a portal is to/from the hub world  
     public bool lockedPortal = true;  // If true, the player should not be able to pass through it
@@ -39,6 +39,7 @@ public class Portal : MonoBehaviour
         else if (LevelNum == 0) {
             SceneManager.LoadScene("LevelHub");
         }
+
     }
 
     public static void LoadLevel()

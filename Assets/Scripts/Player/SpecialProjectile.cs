@@ -25,5 +25,6 @@ public class SpecialProjectile : MonoBehaviour
         {
             Debug.Log("BURN");
         }
+        SoundManager.Play3DSound(SoundManager.Sound.SpecialAttack, gameObject);
     }
 }

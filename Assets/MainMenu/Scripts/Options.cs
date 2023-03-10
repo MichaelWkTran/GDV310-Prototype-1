@@ -26,14 +26,29 @@ public class Options : MonoBehaviour
         if (soundSlider.value != SoundManager.soundVolume)
         {
             SoundManager.SoundEffectVolumeChange(soundSlider.value);
-            SoundManager.PlayCheckSound(SoundManager.Sound.MenuOptionSelected);
+            if (!GetComponent<AudioSource>())
+            {
+                SoundManager.PlaySound(SoundManager.Sound.MenuOptionSelected, gameObject);
+            }
+            else
+            {
+                GameObject.Destroy(GetComponent<AudioSource>());
+                SoundManager.PlaySound(SoundManager.Sound.MenuOptionSelected, gameObject);
+            }
         }
         if (enemySlider.value != SoundManager.enemyVolume)
         {
             SoundManager.EnemyVolumeChange(enemySlider.value);
-            SoundManager.PlayCheckSound(SoundManager.Sound.EnemyDie);
+            if (!GetComponent<AudioSource>())
+            {
+                SoundManager.PlaySound(SoundManager.Sound.EnemyDie, gameObject);
+            }
+            else
+            {
+                GameObject.Destroy(GetComponent<AudioSource>());
+                SoundManager.PlaySound(SoundManager.Sound.EnemyDie, gameObject);
+            }
         }
+        GetComponent<AudioSource>().ignoreListenerPause = true;
     }
-
-
 }

@@ -13,7 +13,7 @@ public class MouseLook : MonoBehaviour
 
     public bool m_CursorLocked = true;
 
-    void LockCursor()
+    public void LockCursor()
     {
         if (m_CursorLocked)
         {
