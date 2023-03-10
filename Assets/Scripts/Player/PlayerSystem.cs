@@ -21,8 +21,8 @@ public class PlayerSystem : MonoBehaviour
 
     //Weapon Active Check
     public bool wandActive;
-    public Image wand;
-    public Image sword;
+    //public Image wand;
+    //public Image sword;
 
     //Buff timer floats
     public float bTimerRegen;
@@ -70,9 +70,9 @@ public class PlayerSystem : MonoBehaviour
         sliderRValue.value = bTimerRegen;
     }
 
-    public void JumpSlider()
+    public void DashSlider()
     {
-        sliderJValue.value = bTimerRegen;
+        sliderJValue.value = CharacterController1.dashValue;
     }
 
     // Update is called once per frame
@@ -81,23 +81,24 @@ public class PlayerSystem : MonoBehaviour
         Health();
         RegenSlider();
         DMGSlider();
+        DashSlider();
         //Changes weapon active
-        if (Input.GetMouseButtonDown(0))
-        {
-            wandActive = !wandActive;
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    wandActive = !wandActive;
+        //}
         
         //Displays active weapon
-        if (wandActive)
-        {
-            wand.enabled = true;
-            sword.enabled = false;
-        }
-        else if (!wandActive)
-        {
-            wand.enabled = false;
-            sword.enabled = true;
-        }
+        //if (wandActive)
+        //{
+        //    wand.enabled = true;
+        //    sword.enabled = false;
+        //}
+        //else if (!wandActive)
+        //{
+        //    wand.enabled = false;
+        //    sword.enabled = true;
+        //}
         
         if(bTimerDMGBoost > 0.0f)
         {

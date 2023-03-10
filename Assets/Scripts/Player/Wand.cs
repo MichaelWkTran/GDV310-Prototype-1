@@ -50,7 +50,7 @@ public class Wand : MonoBehaviour
             SpecialWandAttack();
             timer = 0;
         }
-        sliderBar.value = charge;
+        sliderBar.value = Wand.wandCharge * 33.333f;
         //specialChargeBar.fillAmount = Wand.wandCharge / wandChargeMax;
     }
 
