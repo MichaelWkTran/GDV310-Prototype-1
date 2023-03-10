@@ -24,6 +24,10 @@ public class PauseMenu : MonoBehaviour
         {
             optionsSelect.SetActive(false);
         }
+        if (controlScheme = GameObject.Find("ControlScheme"))
+        {
+            controlScheme.SetActive(false);
+        }
         cursorControl = GameObject.Find("Main Camera").GetComponent<MouseLook>();
     }
 
@@ -96,11 +100,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (SoundManager.volumeUpdated)
         {
-            AudioSource[] audioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-            foreach (obj in audioSources)
-            {
+            //AudioSource[] audioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+            //foreach (obj in audioSources)
+            //{
 
-            }
+            //}
 
             SoundManager.volumeUpdated = false;
         }
