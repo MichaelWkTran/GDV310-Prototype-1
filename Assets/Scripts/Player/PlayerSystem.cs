@@ -70,9 +70,9 @@ public class PlayerSystem : MonoBehaviour
         sliderRValue.value = bTimerRegen;
     }
 
-    public void JumpSlider()
+    public void DashSlider()
     {
-        sliderJValue.value = bTimerRegen;
+        sliderJValue.value = CharacterController1.dashValue;
     }
 
     // Update is called once per frame
@@ -81,6 +81,7 @@ public class PlayerSystem : MonoBehaviour
         Health();
         RegenSlider();
         DMGSlider();
+        DashSlider();
         //Changes weapon active
         if (Input.GetMouseButtonDown(0))
         {
