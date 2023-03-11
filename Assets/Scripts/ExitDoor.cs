@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ExitDoor : MonoBehaviour
 {
     float yPos;
+    public GameObject congratulationsText; //Text telling the player they cleared the game 
 
 
     // Start is called before the first frame update

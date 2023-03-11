@@ -44,6 +44,7 @@ public class Turret : Enemy
         {
             fireTime = 0;
             GameObject projectile = Instantiate(projectilePrefab.gameObject, firePoint.position, Quaternion.identity);
+            SoundManager.Play3DSound(SoundManager.Sound.Dash, projectile);
             projectile.GetComponent<Rigidbody>().velocity = head.forward * fireSpeed;
             Destroy(projectile, projectileLifetime);
         }

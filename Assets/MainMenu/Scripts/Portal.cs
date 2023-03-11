@@ -16,21 +16,26 @@ public class Portal : MonoBehaviour
     public Animator fadeEffect;
     public static float maxFadeTime = 2.0f;
     public static float fadeTime;     //  
+
+    public Material locked;
+    public Material unlocked;
     
     /// <summary>
     /// Loads 
     /// </summary>
     /// <param name="other">The player game object, used for teleporting versions </param>
     /// <returns></returns>
-    IEnumerator LoadLevel(GameObject other)
+    IEnumerator LoadLevel(GameObject other, bool preventAccess)
     {
 
         //Need to fade in and out music as well
-
-
         fadeEffect.SetTrigger("Start");
-
         yield return new WaitForSeconds(fadeTime);
+
+        if (preventAccess)
+        {
+
+        }
 
         if (LevelNum >= 1)
         {
@@ -80,15 +85,31 @@ public class Portal : MonoBehaviour
         //}
         fadeTime = maxFadeTime;
         fadeEffect = GameObject.Find("Image").GetComponent<Animator>(); //Name of loading screen-> animatior fades it in and out between scenes
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+
+        if (lockedPortal)
+        {
+            meshRenderer.material = locked;
+        }
+        else
+        {
+            meshRenderer.material = unlocked;
+        }
+
     }
 
     // Starts the process of moving the player into a new scene 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Main Camera" && !lockedPortal)
-        { 
-            StartCoroutine(LoadLevel(other.gameObject));
-        }
+        if (other.tag == "MainCamera") 
+            if (!lockedPortal)
+            { 
+                StartCoroutine(LoadLevel(other.gameObject, false));
+            }
+            else if (starterPortal)
+            {
+                StartCoroutine(LoadLevel(other.gameObject, true));
+            }
     }
 
     /// Levels explored would increment when a player reaches the end of a level and enters another one. Potentially used for difficulty adjustment
