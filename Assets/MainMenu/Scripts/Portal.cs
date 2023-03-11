@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,13 +14,13 @@ public class Portal : MonoBehaviour
     public bool starterPortal;        // Whether a portal is to/from the hub world  
     public bool lockedPortal = true;  // If true, the player should not be able to pass through it
 
+    //
     public Animator fadeEffect;
     public static float maxFadeTime = 2.0f;
-    public static float fadeTime;     //  
 
     public Material locked;
     public Material unlocked;
-    
+    public GameObject pushbackText;
     /// <summary>
     /// Loads 
     /// </summary>
@@ -30,18 +31,25 @@ public class Portal : MonoBehaviour
 
         //Need to fade in and out music as well
         fadeEffect.SetTrigger("Start");
-        yield return new WaitForSeconds(fadeTime);
 
         if (preventAccess)
         {
+            pushbackText.SetActive(true);
+        }
+        yield return new WaitForSeconds(maxFadeTime);
 
+        if (preventAccess)
+        { 
+            SceneManager.LoadScene(1);
         }
 
         if (LevelNum >= 1)
         {
             SceneManager.LoadScene(LevelNum + 1); // +1 so it doesn't transport back to level hub or main menu
         }
-        else if (LevelNum == 0) {
+
+        else if (LevelNum == 0) 
+        {
             SceneManager.LoadScene("LevelHub");
         }
 
@@ -49,11 +57,7 @@ public class Portal : MonoBehaviour
 
     public static void LoadLevel()
     {
-        print(fadeTime);
-        //yield return new WaitForSeconds(fadeTime);
-  
-        SceneManager.LoadScene(1);
-        
+        SceneManager.LoadScene(1);   
     }
     ///If we decide to use a teleport within one scene instead use this code, or remove the transition for a teleporter on the same map 
     //transition.SetTrigger("EndWait");
@@ -64,7 +68,6 @@ public class Portal : MonoBehaviour
     /// <summary>
     /// Allows other scripts to change the locked state of the door
     /// Which will allow us to let players slowly unlock levels instead of having them all accessible at once
-    /// 
     /// </summary>
     public void LockChangeDoor()
     {
@@ -83,11 +86,10 @@ public class Portal : MonoBehaviour
         //{
         ////    LevelNum = 6;
         //}
-        fadeTime = maxFadeTime;
         fadeEffect = GameObject.Find("Image").GetComponent<Animator>(); //Name of loading screen-> animatior fades it in and out between scenes
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
-        if (lockedPortal)
+        if (lockedPortal) //Sets the mesh to the corresponding mesh state
         {
             meshRenderer.material = locked;
         }
@@ -102,7 +104,7 @@ public class Portal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "MainCamera") 
-            if (!lockedPortal)
+            if (!lockedPortal) //Since there are portals the player can attempt to enter that lead to nowhere and there's little feedback, I've added in some 
             { 
                 StartCoroutine(LoadLevel(other.gameObject, false));
             }
