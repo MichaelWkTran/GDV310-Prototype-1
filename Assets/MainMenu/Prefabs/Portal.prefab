@@ -101,9 +101,10 @@ MonoBehaviour:
   starterPortal: 0
   lockedPortal: 1
   fadeEffect: {fileID: 0}
-  locked: {fileID: 2100000, guid: 81988e9e95a606246a7fd052b24fa530, type: 2}
-  unlocked: {fileID: 2100000, guid: f3184f24717aec34dbc337576f52e458, type: 2}
+  lockedMat: {fileID: 2100000, guid: 81988e9e95a606246a7fd052b24fa530, type: 2}
+  unlockedMat: {fileID: 2100000, guid: f3184f24717aec34dbc337576f52e458, type: 2}
   pushbackText: {fileID: 0}
+  congratulationsText: {fileID: 0}
 --- !u!65 &1231275191223485888
 BoxCollider:
   m_ObjectHideFlags: 0
