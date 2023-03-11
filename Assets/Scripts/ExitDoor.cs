@@ -9,7 +9,7 @@ public class ExitDoor : Portal
     bool win = false;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         yPos = transform.position.y;
         win = false;
