@@ -65,8 +65,8 @@ public class Wand : MonoBehaviour
             rb.freezeRotation = true;                                                                                                                      // no rotation
             rb.useGravity = false;                                                                                                                         // no gravity
             rb.AddForce(player.transform.forward * forceStrength, ForceMode.Impulse);                                                                      // add orce to rb 
-            Destroy(copy, 3);
-        }                                                                                                                       // destroy object 
+            Destroy(copy, 3);                                                                                                                              // destroy object 
+        }                                                                                                                       
     }
 
 
