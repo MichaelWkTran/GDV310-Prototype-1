@@ -85,7 +85,7 @@ public class Portal : MonoBehaviour
     // Starts the process of moving the player into a new scene 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && !lockedPortal)
+        if (other.tag == "Main Camera" && !lockedPortal)
         { 
             StartCoroutine(LoadLevel(other.gameObject));
         }
