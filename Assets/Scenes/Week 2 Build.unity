@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7525,6 +7525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1823316475010180150, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4, type: 3}
 --- !u!1001 &242399546
@@ -7593,6 +7598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Archer (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
         type: 3}
@@ -8374,7 +8384,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh206748
+  m_Name: pb_Mesh90750
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9202,6 +9212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -9459,6 +9474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -9639,6 +9659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
@@ -11339,6 +11364,7 @@ GameObject:
   - component: {fileID: 919756302}
   - component: {fileID: 919756301}
   - component: {fileID: 919756303}
+  - component: {fileID: 919756304}
   m_Layer: 0
   m_Name: ExitDoor
   m_TagString: Untagged
@@ -11379,7 +11405,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e8c3672250bc62b48b7dbe166d4a40d4, type: 2}
+  - {fileID: 2100000, guid: f3184f24717aec34dbc337576f52e458, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11620,6 +11646,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 359f85317db7a054aa6c64886fee87d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelNum: 0
+  starterPortal: 0
+  lockedPortal: 1
+  fadeEffect: {fileID: 983860390}
+  lockedMat: {fileID: 2100000, guid: 81988e9e95a606246a7fd052b24fa530, type: 2}
+  unlockedMat: {fileID: 2100000, guid: f3184f24717aec34dbc337576f52e458, type: 2}
+  pushbackText: {fileID: 0}
+  congratulationsText: {fileID: 1603987665}
+--- !u!114 &919756304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919756294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &925008779
 GameObject:
   m_ObjectHideFlags: 0
@@ -12137,6 +12191,12 @@ Transform:
   m_Father: {fileID: 347300825}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &983860390 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5966730665363218579, guid: a687bdd8d0d290d4082a54d2b52275c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1773791565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &993349120
 Mesh:
   m_ObjectHideFlags: 0
@@ -12322,6 +12382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chaser (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
@@ -12991,7 +13056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh206764
+  m_Name: pb_Mesh90766
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18521,6 +18586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -19639,6 +19709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret
       objectReference: {fileID: 0}
+    - target: {fileID: 1823316475010180150, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4, type: 3}
 --- !u!43 &1315789239
@@ -20015,6 +20090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520833359191734130, guid: 5879cfee056df124f8c22d2af868243f,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -20260,7 +20340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh206436
+  m_Name: pb_Mesh90438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20853,6 +20933,7 @@ GameObject:
   - component: {fileID: 1461155152}
   - component: {fileID: 1461155151}
   - component: {fileID: 1461155153}
+  - component: {fileID: 1461155154}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -21059,13 +21140,33 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!114 &1461155154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461155150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!43 &1488569413
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh206338
+  m_Name: pb_Mesh90340
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21289,6 +21390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Archer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
         type: 3}
@@ -21547,6 +21653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Archer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
         type: 3}
@@ -22253,6 +22364,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1603987665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7494180216060421321, guid: a687bdd8d0d290d4082a54d2b52275c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1773791565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1607767753
 Mesh:
   m_ObjectHideFlags: 0
@@ -22843,6 +22960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Turret (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823316475010180150, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4, type: 3}
@@ -23562,6 +23684,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1809472819994249587, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809472819994249587, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809472819994249587, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2417102683047956024, guid: a687bdd8d0d290d4082a54d2b52275c5,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -23581,6 +23718,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149911369775612150, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149911369775612150, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042388408850005697, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770359137665299833, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5166527882142372126, guid: a687bdd8d0d290d4082a54d2b52275c5,
         type: 3}
@@ -23712,6 +23869,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 5966730665549999284, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318692567160809864, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793632355691086708, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6937597605536100383, guid: a687bdd8d0d290d4082a54d2b52275c5,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -23736,6 +23908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091026787030984523, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7209542641595782071, guid: a687bdd8d0d290d4082a54d2b52275c5,
         type: 3}
@@ -23767,12 +23944,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7494180216060421321, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7912443107543143172, guid: a687bdd8d0d290d4082a54d2b52275c5,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7912443107543143172, guid: a687bdd8d0d290d4082a54d2b52275c5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136523314502763796, guid: a687bdd8d0d290d4082a54d2b52275c5,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -25415,7 +25602,7 @@ GameObject:
   - component: {fileID: 1994628934}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26216,6 +26403,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1823316475010180150, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1fa9ee8ea502484b955d2fcbdaaf5b4, type: 3}
 --- !u!43 &2095421042
@@ -26224,7 +26416,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh206426
+  m_Name: pb_Mesh90428
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26393,6 +26585,7 @@ GameObject:
   - component: {fileID: 2108150949}
   - component: {fileID: 2108150951}
   - component: {fileID: 2108150950}
+  - component: {fileID: 2108150952}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -26599,6 +26792,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0.5
   m_ShadowAngle: 0
+--- !u!114 &2108150952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108150948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!43 &2116813716
 Mesh:
   m_ObjectHideFlags: 0
@@ -26907,6 +27120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Archer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 507782256314347350, guid: 7331bc6046525914883e1971bc7a1eba,
         type: 3}

@@ -102,7 +102,7 @@ public class CharacterController1 : MonoBehaviour
 
             // updated velocity to include dashing
             velocity = velocity + dashVel * dashSpeed;
-            Debug.Log(velocity);
+            //Debug.Log(velocity);
 
             // applies movement to the controller
             m_Controller.Move(velocity * Time.deltaTime);

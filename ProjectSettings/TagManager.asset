@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - LevelPortal
   - SpecialProj
+  - Level
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Outline
   - 
   - 
   - 

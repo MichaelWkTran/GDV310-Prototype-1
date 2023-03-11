@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Wand.wandCharge);
+       //Debug.Log(Wand.wandCharge);
     }
 
 

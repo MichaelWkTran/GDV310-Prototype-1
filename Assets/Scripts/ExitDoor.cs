@@ -3,36 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitDoor : MonoBehaviour
+public class ExitDoor : Portal
 {
     float yPos;
-    public GameObject congratulationsText; //Text telling the player they cleared the game 
-
+    bool win = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        yPos = transform.position.y; 
-
-        transform.position = new Vector3(transform.position.x, -1000.0f, transform.position.z);
+        yPos = transform.position.y;
+        win = false;
+        base.Start();
+        // transform.position = new Vector3(transform.position.x, -1000.0f, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0) // all enemies defeated
+       if (MusicCheck.enemyCount == 0) // all enemies defeated
+       {
+            //transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
+            lockedPortal = false;
+            GetComponent<MeshRenderer>().material = unlockedMat;
+            win = true;
+       }
+        else
         {
-            transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
+            lockedPortal = true;
+            GetComponent<MeshRenderer>().material = lockedMat;
+            win = false;
         }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Main Camera")
+        if (other.name == "Main Camera" && win)
         {
             // teleport player back to hub/win place
-            SceneManager.LoadScene(sceneBuildIndex:1);
+            congratulationsText.SetActive(true);
+            base.LoadLevel();
         }
     }
 }

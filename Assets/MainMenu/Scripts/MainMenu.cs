@@ -31,7 +31,7 @@ public class MainMenu : MonoBehaviour
     {
         fadeEffect.SetTrigger("Start");
 
-        Portal.LoadLevel();
+        Portal.LoadLevelHub();
     }
    
     public void QuitGame()
