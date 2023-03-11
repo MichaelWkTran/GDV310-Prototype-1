@@ -137,6 +137,8 @@ public class Chaser : Enemy
         hitBox.isTrigger = false;
         enabled = false;
 
+        SoundManager.Play3DSound(SoundManager.Sound.EnemyDie, gameObject);
+
         //Destroy the Enemy
         Destroy(gameObject, 10.0f);
     }
