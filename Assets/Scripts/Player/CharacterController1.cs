@@ -17,6 +17,7 @@ public class CharacterController1 : MonoBehaviour
     private AudioSource dashAudio;
     public Animator animator;
 
+    Vector3 inputMove;
     public float moveSpeed = 4.0f;
     public Vector3 velocity;
     private Vector3 dashVel;
@@ -30,6 +31,7 @@ public class CharacterController1 : MonoBehaviour
 
     private bool canDash;
     public static float dashValue;
+    public GameObject dashParticles;
 
     // player attacking
     float timer = 1.0f;
@@ -84,25 +86,11 @@ public class CharacterController1 : MonoBehaviour
             }
 
 
-            Vector3 inputMove = new Vector3(x, 0.0f, z);
+            inputMove = new Vector3(x, 0.0f, z);
             inputMove = Quaternion.Euler(0.0f, m_Look.m_Spin, 0.0f) * inputMove;
 
-            // dash
-            dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTimer * Time.deltaTime);
 
-            if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                dashVel = inputMove;
-                dashVel.y = 0.0f;
-
-                SoundManager.Play3DSound(SoundManager.Sound.Dash, gameObject);
-
-                StartCoroutine(DashCoolDown());
-                StartCoroutine(DashValueIncrease());
-
-                dashValue = 0.0f;
-            }
-
+            Dash(); // call the dash function
             
 
             float sprintMod = 1.0f;
@@ -205,5 +193,27 @@ public class CharacterController1 : MonoBehaviour
             dashValue += 10;
             yield return new WaitForSeconds(0.3f);
         }   
+    }
+
+
+    public void Dash()
+    {
+        // dash
+        dashVel = Vector3.Lerp(dashVel, new Vector3(0.0f, 0.0f, 0.0f), dashTimer * Time.deltaTime);
+
+        if (canDash && Input.GetKeyDown(KeyCode.LeftShift) && (!PauseMenu.isPaused))
+        {
+            dashVel = inputMove;
+            dashVel.y = 0.0f;
+
+            dashParticles.GetComponent<ParticleSystem>().Play();
+
+            SoundManager.Play3DSound(SoundManager.Sound.Dash, gameObject);
+
+            StartCoroutine(DashCoolDown());
+            StartCoroutine(DashValueIncrease());
+
+            dashValue = 0.0f;
+        }
     }
 }
