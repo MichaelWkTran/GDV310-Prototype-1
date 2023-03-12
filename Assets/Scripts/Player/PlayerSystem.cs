@@ -43,7 +43,7 @@ public class PlayerSystem : MonoBehaviour
     public float specialChargeMax = 100.0f;
 
     public GameObject deathText;
-
+    public Animator fadeOut;
 
     // Start is called before the first frame update
     void Start()
@@ -168,10 +168,10 @@ public class PlayerSystem : MonoBehaviour
             StartCoroutine(DeathTextTimer());
             SoundManager.Play3DSound(SoundManager.Sound.PlayerDie, gameObject);
         }
-        
+
         if (pDead && !GetComponent<AudioSource>().isPlaying)
         {
-           
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // reload level
         }
     }
@@ -181,6 +181,7 @@ public class PlayerSystem : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Week 2 Build")
         {
+            fadeOut.SetTrigger("Start");
             deathText.SetActive(true);
             yield return new WaitForSeconds(1);
         }

@@ -200,7 +200,9 @@ public class Archer : Enemy
         GetComponent<Collider>().enabled = false;
         enabled = false;
 
+        SoundManager.Play3DSound(SoundManager.Sound.EnemyDie, gameObject);
+
         //Destroy the Enemy
-        Destroy(gameObject, 10.0f);
+        Destroy(gameObject, 3.0f);
     }
 }

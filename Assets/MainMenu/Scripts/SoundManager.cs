@@ -12,7 +12,7 @@ public static class SoundManager
     /// </summary>
 
     //Volumes
-    public static float musicVolume = 0.75f;
+    public static float musicVolume = 1f;
     public static float soundVolume = 1f;
     public static float enemyVolume = 1f;
     
@@ -157,21 +157,6 @@ public static class SoundManager
         }
     }
 
-    /// <summary>
-    /// Plays a sound for checking audio levels
-    /// </summary>
-    /// <param name="sound"></param>
-    //public static void PlayCheckSound(Sound sound)
-    //{
-    //    if (AudioAssets.instance.soundsArray.Length > (int)sound && (int)sound >= 0) //Checks if the sound the system is trying to use is stored in the audio assets 
-    //    {
-    //        AudioSource audioSource = musicPlayer.AddComponent<AudioSource>();
-    //        AudioAssets.instance.soundsArray[(int)sound].SoundGenerated(audioSource);
-    //        Debug.Log(audioSource.volume);
-    //        audioSource.PlayOneShot(audioSource.clip);
-    //        GameObject.Destroy(audioSource, AudioAssets.instance.soundsArray[(int)sound].length);
-    //    }
-    //}
     /// <summary>
     /// Play a sound with a specific location
     /// </summary>

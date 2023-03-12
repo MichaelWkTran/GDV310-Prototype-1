@@ -7592,7 +7592,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30612
+  m_Name: pb_Mesh2072216
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15436,6 +15436,7 @@ MonoBehaviour:
   specialCharge: 0
   specialChargeMax: 100
   deathText: {fileID: 923099077}
+  fadeOut: {fileID: 1773791567}
 --- !u!82 &944544991
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16833,12 +16834,12 @@ PrefabInstance:
     - target: {fileID: 7520833359191734135, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.56563
+      value: 53.58
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734135, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.685257
+      value: 41.67
       objectReference: {fileID: 0}
     - target: {fileID: 7520833359191734135, guid: 5879cfee056df124f8c22d2af868243f,
         type: 3}
@@ -18537,7 +18538,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b739a3f02ff77bf48b7636e64c3e3b4c, type: 2}
+  - {fileID: 2100000, guid: 0d9a0c4d089e77d4d91379ab2abf9d74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
