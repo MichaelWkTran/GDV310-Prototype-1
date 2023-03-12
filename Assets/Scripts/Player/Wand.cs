@@ -18,7 +18,7 @@ public class Wand : MonoBehaviour
 
     public float forceStrength = 10.0f; // strength of force
 
-    public static float wandCharge = 3; // how many enemies need to be killed for player to use special attack
+    public static float wandCharge; // how much charge for player to use special attack
     private float wandChargeMax = 3; // maximum number wandCharge can be
 
     // delay wand shoot
@@ -30,7 +30,7 @@ public class Wand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        wandCharge = 3; // special is charged at start of game
     }
 
     // Update is called once per frame
