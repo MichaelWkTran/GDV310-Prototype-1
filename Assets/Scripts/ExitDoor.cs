@@ -45,17 +45,19 @@ public class ExitDoor : Portal
 
     private void OnTriggerEnter(Collider other)
     {
-        print(MusicCheck.enemyCount);
-        if (other.tag == "MainCamera" && win)
+        if (other.tag == "MainCamera")
         {
-            pushbackText.SetActive(false);
-            // teleport player back to hub/win place
-            congratulationsText.SetActive(true);
-            base.LoadLevel();
-        }
-        else
-        {
-            pushbackText.SetActive(true);
+            if (win)
+            {
+                pushbackText.SetActive(false);
+                // teleport player back to hub/win place
+                congratulationsText.SetActive(true);
+                base.LoadLevel();
+            }
+            else
+            {
+                pushbackText.SetActive(true);
+            }
         }
     }
     private void OnTriggerExit(Collider other)
