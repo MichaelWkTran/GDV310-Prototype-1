@@ -86,12 +86,8 @@ public class PlayerSystem : MonoBehaviour
         DMGSlider();
         DashSlider();
 
-        if (pHealth <= 0 && !pDead)  // check whether player has no health
-        {
-            pDead = true;
-            SoundManager.Play3DSound(SoundManager.Sound.PlayerDie, gameObject);
-            //StartCoroutine(RestartLevel());
-        }
+        RestartLevel(); // check whether player has no health
+
 
         //Changes weapon active
         //if (Input.GetMouseButtonDown(0))
@@ -160,9 +156,16 @@ public class PlayerSystem : MonoBehaviour
         pHealth -= value;
     }
 
-    IEnumerator RestartLevel()
+    void RestartLevel()
     {
-            yield return new WaitForSeconds((int)AudioAssets.instance.soundsArray[5].length);
+        if (pHealth <= 0 && !pDead)
+        {
+            pDead = true;
+            SoundManager.Play3DSound(SoundManager.Sound.PlayerDie, gameObject);
+        }
+        if (pDead && !GetComponent<AudioSource>().isPlaying)
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // reload level
+        }
     }
 }
