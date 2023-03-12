@@ -1,0 +1,1207 @@
+commit e5261cc47a52c30e0626f43dfe14360e490a718e
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sun Mar 12 22:06:34 2023 +1300
+
+    Fixed level restart in level hub scene
+
+commit 4a05af8155651dc59be5fc0dc9e01758a4b93df4
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sun Mar 12 21:34:02 2023 +1300
+
+    Added death text when player dies
+
+commit a04af550db5bb6f9b9e49112aa8622eb9fd78946
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 20:56:22 2023 +1300
+
+    Build
+
+commit 6d935a5cda4a7954e3a00ee78ea9d98f3b4aefec
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 20:45:00 2023 +1300
+
+    Fixed Restart
+
+commit cd68fd7fd178926ce6fd5b306c3c4c86914f75e0
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 20:33:03 2023 +1300
+
+    Updating sounds again
+
+commit 1c35867143ea4631ec1740c9ba88b5eb0499e606
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 20:19:13 2023 +1300
+
+    Adding more sounds
+
+commit 5a0e60969ddc534fcb49f3db1ea7d9a4a67cd20f
+Merge: 81aa497 6195c27
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 19:34:49 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 6195c275c43135eb1d8431ea37d28ba34b46d5f9
+Merge: 7ae11d3 07131ec
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 19:09:09 2023 +1300
+
+    Merge pull request #12 from MichaelWkTran/Johann
+    
+    Environment Roof
+
+commit 07131ec81f90467ecf1ccd16494b653dc2d44e36
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 19:08:31 2023 +1300
+
+    Environment Roof
+
+commit 81aa497c1c752f6cd1329a6ccd478ec98a0020c3
+Merge: ee9f86f 7ae11d3
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 18:15:01 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 7ae11d3feaf2c9f428858acb2512b31f8826bc0b
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sun Mar 12 18:13:01 2023 +1300
+
+    Fixed camera shake after pause breaking camera
+
+commit ee9f86fc3fc35cb90fcc169a0975d08760922601
+Merge: fa15a7d 1a9946b
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 17:36:09 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit fa15a7d28a5109b338667622026d7e1b27a1898d
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 17:35:02 2023 +1300
+
+    Correct Exit Door Text
+
+commit 1a9946b9dead2fa48ac603e3a5077dc96a71f7d6
+Merge: ae95f1e 1e753f0
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 17:20:22 2023 +1300
+
+    Environment Decoration
+    
+    Johann
+
+commit 1e753f0a72bf01a74e692d7c410b60adfb02d51f
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 17:18:45 2023 +1300
+
+    environment object image update
+
+commit f8cf0c30ff4308fc8d5a29de0025194c26e9957f
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 17:17:16 2023 +1300
+
+    Preparing for build
+
+commit 7f88bd0011269b30e2b4a4c5f3bfa4d6b1028c89
+Merge: 7d2eed0 ae95f1e
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 17:17:12 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 7d2eed071874264edaf7117713f92b20645b345c
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 17:06:30 2023 +1300
+
+    Environment Update
+
+commit ae95f1eb23d44ddb60b2879e0549d1c512b52ee8
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sun Mar 12 16:52:03 2023 +1300
+
+    Special attack charge is set to 100% when player dies and restarts level
+
+commit 957760957dff6dd7e017b1f8f3169a9eb2399016
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Sun Mar 12 16:27:24 2023 +1300
+
+    Update HitCollider.cs
+
+commit 6eb2cf39d8dfe5a0ce8934d0a5f1fc82bcdcf80a
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 14:19:10 2023 +1300
+
+    Updated environments for hub world and main menu
+
+commit 4bc75bc0e7f29edd9693d35094376df4aac7b09e
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 12:01:52 2023 +1300
+
+    Removed soundcheck again, fixing unity and levelhub issues
+
+commit c9a79321bd4073816065a1f7b9abb8b27ade6ca6
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 11:58:44 2023 +1300
+
+    remove duplicate script
+
+commit de10e9a19d59f7349259f67c4b0f82368a0e547e
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 11:54:53 2023 +1300
+
+    Updating Level Loader + portal prefab, removing uneeded script
+
+commit 04f54fa4a0a412b3aa8684d58d8fbf7394b36b37
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 11:11:39 2023 +1300
+
+    torch and vfx tweakings
+
+commit e4fbacb9b30d4a92bb6a379c9b855cd9e34cd551
+Merge: 24c565e 0ad312e
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 12 10:35:48 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 9bd7fb76490932a8d20e028dc324bd27130bce24
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 10:08:11 2023 +1300
+
+    Fixing menu and exit door
+
+commit 5b2c0f49ab370ae116bc7df7f174674100dd60a5
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 09:07:50 2023 +1300
+
+    Attempt to get functional build
+
+commit 561f9a1ace28de1eaf6cc71e1977e54095ae42c5
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 03:31:06 2023 +1300
+
+    Trying to fix saving over the week 2 build previously by accident
+
+commit 2492c12b7c941ea4eeb16322846d62687e9a2f28
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 03:19:44 2023 +1300
+
+    Trying to fix accidentally saving over main scene
+
+commit e16160d673713b96567a64d5688aaec34c7695ba
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 03:15:25 2023 +1300
+
+    Fixing Portal and sound issues
+
+commit 0ad312e1d37cd5daacb7bf2edaaa2b303a3bf6b1
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 01:19:42 2023 +1300
+
+    Update Portal comments
+
+commit 191ef366b9cd87612c55cc4cce8fa0cf4d46207a
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 01:16:07 2023 +1300
+
+    Ensuring same scene reset works for hub
+
+commit 33917490866c26e78062bb7137c6b79eea39b257
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 12 00:52:42 2023 +1300
+
+    Adding Portal, Font, Some enemy sound feedback, some reorganisation
+
+commit 24c565eebbd93ef2958cf03d07fc1c37dd69b50c
+Merge: 913482c 248f9c5
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 16:38:33 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 913482c50475a26b9dc78eafad650271bfea41bb
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 16:38:23 2023 +1300
+
+    Fireball
+
+commit 511ab7fa78e9d9f7547df48726844bcfdf20c67c
+Merge: d78e624 248f9c5
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 11 13:20:08 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 248f9c5bf8382d3aa8549a42189b58e4b3d2e245
+Merge: 5562277 8884cf4
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sat Mar 11 13:18:48 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 8884cf48f426512f92ddc914a4a727ac6fd31da8
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sat Mar 11 13:18:30 2023 +1300
+
+    Added vfx to dash
+
+commit d78e6243ea96b7ded8a0aa711919e5c93d55f146
+Merge: 92b1787 5562277
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 11 13:01:19 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 92b17873629d74f73f6792cfabe3950f832929f7
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 11 13:00:10 2023 +1300
+
+    Portal Change tag to main camera for ease
+
+commit 5562277857ce2649978c718d63e4f0b1580d432d
+Merge: 2fa6ae1 c608ef2
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:57:17 2023 +1300
+
+    Merge pull request #10 from MichaelWkTran/Johann
+    
+    Johann
+
+commit c608ef2be759416e88e3053a7560c83c64b30deb
+Merge: 5537220 2fa6ae1
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:55:59 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 553722072cc57818b35b7c78e0af13cb57c9554b
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:55:49 2023 +1300
+
+    URP
+
+commit 2fa6ae1110f26442e887aa0ff2468c9ee5dde31f
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sat Mar 11 12:45:04 2023 +1300
+
+    level is now reloaded if the player loses all their health
+
+commit 485af7b71287ba415441c301bd11863ac1d4666d
+Merge: cfd8a44 6bbf0cd
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sat Mar 11 12:30:05 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 6bbf0cdb0c61be553a817ff94947f5126b1dcfb1
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sat Mar 11 12:29:48 2023 +1300
+
+    Readded crosshair color change
+
+commit cfd8a44db3ad45c2c6c4880f7200acf2e97c0115
+Merge: d80c973 4d8ee8b
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 11 12:29:16 2023 +1300
+
+    Merge branch 'Victoria-Branch'
+
+commit 4d8ee8bbada4d249abbb62616ec79074f9270fe8
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 11 12:28:37 2023 +1300
+
+    Pushing for Sean to make Hub adjustments
+
+commit d80c973ffc149a80f0f2e095b7cc21d520ab68dc
+Merge: a262581 4fa2f43
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:13:05 2023 +1300
+
+    Merge pull request #9 from MichaelWkTran/Johann
+    
+    Johann
+
+commit 4fa2f43924ddec10ec8ebb080e356aea087d5adc
+Merge: 74a87b9 a262581
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:12:44 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 74a87b90f4b3c20cc48473e21b003547ebd4e310
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:12:28 2023 +1300
+
+    ScreenDashEffect
+
+commit 53021a91bcdb03057fb385790ecd95f9c82f126d
+Merge: 2abd337 a262581
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 11 12:12:20 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit a2625812afa0c879755fa970aeceb7c3aa106368
+Merge: 7b9c830 b854c9c
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:09:42 2023 +1300
+
+    VFX SpeedDash ScreenEffect
+    
+    Johann
+
+commit b854c9c8b4668180246ee64ee776a9083d7f0e7a
+Merge: 44d5d96 7b9c830
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:09:09 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 44d5d9616d97c1a2ed4f011a25936aad03ba1490
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sat Mar 11 12:09:00 2023 +1300
+
+    VFX Speed
+
+commit 7b9c830e2d19966ac46b4ca84f069f1f11e145d5
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Sat Mar 11 11:05:55 2023 +1300
+
+    Added player animation and UI elements to Main Scene
+
+commit 2abd337cf571f19c3f397201636aa940605486c8
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 10 17:50:25 2023 +1300
+
+    Updating sound, making sure scene loader works for the level
+
+commit aff5c78871851e614317360a193e8316a828a6b5
+Merge: bd34cbe a9a52f5
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Fri Mar 10 17:41:04 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit a9a52f50a47f8dbd093d92d6aa17566829171ed6
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Fri Mar 10 17:40:41 2023 +1300
+
+    Linked special attack slider to value given
+    
+    Also fixed bug with camera shake
+
+commit bd34cbe38add9a2332e72137f480e992b9e82466
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 10 14:52:26 2023 +1300
+
+    Music Should Play based on if enemies are present
+
+commit 4383cff20cab05ff93514d6f35137e6c5648204c
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 10 13:48:47 2023 +1300
+
+    Making sure pause menu works within game scenes
+
+commit 70bce939240865e40edcb84654cf9cdb7f3c087c
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 10 13:42:10 2023 +1300
+
+    Fixing Pause Menu error
+
+commit 790fb046b6b31882197653f92fed408157bba274
+Merge: b63edd8 640b07d
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 10 13:34:37 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit b63edd82a2ad8aa9e6715f98d4a633db7240c18d
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 10 13:23:02 2023 +1300
+
+    Sound Manager Updates/ Changes
+
+commit 640b07d7bb7bf255478c5846e295555ceac4dcd8
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Fri Mar 10 10:34:16 2023 +1300
+
+    Merging work into player test scene
+    
+    fixing ui issues and merging it fully into seans test scene
+
+commit d06c53d9ca7ee0934d43ff110b36662740c60a98
+Merge: 3f55557 459527f
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Fri Mar 10 09:57:05 2023 +1300
+
+    Merge branch 'Oli-branch'
+
+commit 459527f32153bf3ae4b0283c67fb85cea55b7dbb
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Fri Mar 10 09:56:52 2023 +1300
+
+    Save point
+    
+    Saving to update the project
+
+commit bfc4f50e57153ca49fc1e933278bf0251b76f787
+Merge: 5a4e261 3f55557
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Thu Mar 9 15:17:43 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 3f5555715995b4f526b0f70a68423f9388ee887b
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Thu Mar 9 11:58:05 2023 +1300
+
+    Fixed special projectile destroying standard projectiles. Added fixed turrets
+
+commit 5a4e2619577dace04d7d9dcd95420a01aefef4fa
+Merge: 29e59e8 818f433
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Wed Mar 8 14:37:14 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 818f433cd8feea1ed5ee848270b93991500ffdb1
+Merge: ae09776 c355145
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Wed Mar 8 13:00:02 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit c3551451e9bbd67da1c6c064c478d2f0f3e93df3
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Wed Mar 8 12:59:44 2023 +1300
+
+    set up win state (exit door)
+    
+    Sends player to level selection hub
+
+commit ae0977677d8f900e1a87df70965c7653e4a8f4eb
+Merge: 42fef5b f808c87
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Tue Mar 7 18:39:03 2023 +1300
+
+    Merge branch 'main' into Michael-Tran
+
+commit 42fef5b959bb4b9b33fad23c8b7a433efca742c1
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Tue Mar 7 18:37:25 2023 +1300
+
+    Added Player Animations
+    
+    Dont want to mess with main scene to prevent merge errors so the animations is on enemy test scene
+
+commit 29e59e8ee9bb57e1bb6e557f272453aa3b8597d3
+Merge: f4b78ee f808c87
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Tue Mar 7 17:38:26 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit f808c87bb8c1e476633ff4c73b1a9fa5b813de61
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Tue Mar 7 15:37:49 2023 +1300
+
+    Added screen shake when player uses special attack
+
+commit f4b78ee0debcf107e2a21a460a7af9c8d567953b
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 18:50:36 2023 +1300
+
+    Revert "TagManager"
+    
+    This reverts commit a15a7de550af5df26f3c8edcd398e52e6f4660d9.
+
+commit a15a7de550af5df26f3c8edcd398e52e6f4660d9
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 18:50:26 2023 +1300
+
+    TagManager
+
+commit 87e50e57a04e76ba89564fe745ecd4dc19225437
+Merge: b8621db 090d568
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 18:48:09 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 090d568433391d9773636d09471b0bd483f3e852
+Merge: 2e59439 a49650d
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Mar 6 16:15:22 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit a49650d3c740e77ef5bf15bb460f8cc0bee0700e
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Mar 6 14:11:28 2023 +1300
+
+    Player can now dash in the direction theyre moving
+    
+    Also added some smaller things
+
+commit bbc9963a1fef34c288bdad1e7bbd0cafdd6fa750
+Merge: 2e59439 a82bb8a
+Author: MichaelWkTran <88115414+MichaelWkTran@users.noreply.github.com>
+Date:   Mon Mar 6 14:01:42 2023 +1300
+
+    Merge remote-tracking branch 'origin/Bradan's-Branch' into Michael-Tran
+
+commit 2e59439e4e123156deb492a5797ca2e174e9d510
+Author: MichaelWkTran <88115414+MichaelWkTran@users.noreply.github.com>
+Date:   Mon Mar 6 13:31:20 2023 +1300
+
+    Fixed Special Projectile
+
+commit b8621db81cb74f2430ed4405c753b0785f39372e
+Merge: d67fa14 150eaf6
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 11:28:36 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 150eaf64dd7c0f2235332b495b445d1c6bee8bef
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 11:23:23 2023 +1300
+
+    Makes scene playable
+
+commit d67fa14f466f4904e2949a4b6c671602dc3844c4
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 11:08:33 2023 +1300
+
+    Minor Pause Changes
+
+commit e7197e338097470e2d67867eaaa6dc30bdba6ff0
+Author: MichaelWkTran <88115414+MichaelWkTran@users.noreply.github.com>
+Date:   Mon Mar 6 11:02:12 2023 +1300
+
+    Forgot to save
+
+commit 2bb4d60c5f6bc31c5e1ae091839b14bd1b360c6e
+Author: MichaelWkTran <88115414+MichaelWkTran@users.noreply.github.com>
+Date:   Mon Mar 6 11:01:24 2023 +1300
+
+    Added Enemies to scene
+
+commit abff9c05136ef0295464a5bad88437fd6b20d96f
+Merge: 7c826c1 d25fc99
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:58:52 2023 +1300
+
+    Merge pull request #7 from MichaelWkTran/Johann
+    
+    Material Change to no normals
+
+commit d25fc994e100d83d51e5d8cc089dbc84eeb3be22
+Merge: 40f5491 7c826c1
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:57:33 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 40f54913b2c503f4a7b21e4e7374edad7a9c774d
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:57:19 2023 +1300
+
+    material change
+
+commit 7c826c18b23b8fdff2721a523a7f43cd0a6f8099
+Merge: 258322f 2567a79
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:56:07 2023 +1300
+
+    Merge pull request #6 from MichaelWkTran/Johann
+    
+    no changes
+
+commit 2567a792814ac27a562298f38de6f0e07158eada
+Merge: f7e74f0 258322f
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:55:08 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit f7e74f0bad6e2d576551e7ecf3a93ada8e90b84f
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:52:19 2023 +1300
+
+    Revert "material change"
+    
+    This reverts commit 189986e4aee847fbdd317b3e0c6817918babaf22.
+
+commit a82bb8af7f3304b0e27e8397d5effce6b5f0c0d9
+Author: freemanReloaded05 <88010980+freemanReloaded05@users.noreply.github.com>
+Date:   Mon Mar 6 10:48:49 2023 +1300
+
+    Same thing just edited
+
+commit 258322f8dc38522bc573b45260719a3e47b5e61a
+Merge: 8978e92 76dbccb
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:47:55 2023 +1300
+
+    Merge pull request #5 from MichaelWkTran/Johann
+    
+    Johann
+
+commit fc8d4fe8b898bdbfa44cd08453aefab85175a8ed
+Author: freemanReloaded05 <88010980+freemanReloaded05@users.noreply.github.com>
+Date:   Mon Mar 6 10:43:31 2023 +1300
+
+    Player Animations
+    
+    Added Animations into a Unity scene called 'Player'
+
+commit 76dbccba3b23b84a985a4a4183e457b5b07937bc
+Merge: 189986e 8978e92
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:40:30 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 189986e4aee847fbdd317b3e0c6817918babaf22
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:40:20 2023 +1300
+
+    material change
+
+commit 8978e92a53cd2f478e88df890fe638fb038b84a7
+Merge: 8e6afeb 658a2b7
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:14:46 2023 +1300
+
+    Merge pull request #4 from MichaelWkTran/Johann
+    
+    Week2Scene
+
+commit 658a2b74a74a3cd9bdcd6c55f8a6aae0e6fdc91e
+Merge: e01fc94 8e6afeb
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:14:25 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit e01fc940dd84330aa839b245c02a30599bc9efa7
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 10:14:04 2023 +1300
+
+    Week2Scene
+
+commit 8e6afeb3e2e75fa2d618778d22c0af71edb4b9ef
+Merge: b67feb6 ec1ce6f
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 09:59:37 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit b67feb61b4f35af99443fdeb9bd03d5871ee7c7d
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 09:58:09 2023 +1300
+
+    Fixing Footsteps
+
+commit ec1ce6ffa31721ae5b52c5a628b096ac7106a541
+Merge: 25dc02b 5209b4d
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 09:56:52 2023 +1300
+
+    Merge pull request #3 from MichaelWkTran/Johann
+    
+    navmesh doors
+
+commit 5209b4d7c2b0b9b71ccd047d05b4d9d1704ca8b6
+Merge: 0d69cc0 25dc02b
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 09:56:27 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 0d69cc01c9ae75c87f550ed398c33ee0c0425372
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Mar 6 09:56:20 2023 +1300
+
+    navmesh_Doors
+
+commit 25dc02bbfe614f35775a939a88f718ef7d39b120
+Merge: ef361ba e51ab23
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Mon Mar 6 09:30:53 2023 +1300
+
+    Merge branch 'Oli-branch'
+
+commit e51ab230113cfd11298ba4f715fbe8ec9580e070
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Mon Mar 6 09:30:32 2023 +1300
+
+    Save Point
+
+commit d25171c465b42bfd5c69d53e007bfb3325c82dc4
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Mon Mar 6 04:15:34 2023 +1300
+
+    save point
+
+commit ef361baafa8abc8205bf7ed3bd22ffd41e74e860
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 01:23:12 2023 +1300
+
+    resetting basic attack volume
+
+commit fc03e72be259a8e142deff684978e6bdafef2d10
+Merge: 9a28217 152b608
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 01:20:25 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 9a282176c8ea18728ac33adf1c8ed5aae1c5259b
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Mar 6 01:19:09 2023 +1300
+
+    Audio Update
+    
+    Sound manager that stores all audio files in an object and adds audio components to objects when needed
+
+commit 152b60881c37365bcc0769731133802cdd375ebb
+Merge: fac3644 cd8959f
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Mon Mar 6 00:27:56 2023 +1300
+
+    Merge branch 'Oli-branch'
+
+commit cd8959f7cedb9523a466c4160f6ef8854805dd0c
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Mon Mar 6 00:27:33 2023 +1300
+
+    creating prefabs
+    
+    Forgot to push this sooner, this is where I created prefabs for drops and player UI
+
+commit 072c72c7ca73a27118d7999bdbf4e3e8bc4f8179
+Merge: 2a7d533 fac3644
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 5 23:15:42 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit fac364475b0d3fa69a71e9ca688d4e388f442cc8
+Merge: a26b18c 781b09d
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Mar 5 23:12:20 2023 +1300
+
+    Merge branch 'main' of https://github.com/MichaelWkTran/GDV310-Prototype-1
+
+commit 781b09dac70c2b461c5743456c33f51026096c9b
+Merge: 70be3ea 6362e8e
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Sun Mar 5 22:20:53 2023 +1300
+
+    Merge branch 'Michael-Tran'
+
+commit 6362e8e37d51b375b9ff05abc087b62503bb24d4
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Sun Mar 5 22:20:40 2023 +1300
+
+    Updated HitCollider
+
+commit 70be3eaeb9e2ab7b13d84be4bf2da8777243bbed
+Merge: 12ca87a 7741760
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 5 21:42:18 2023 +1300
+
+    Merge pull request #2 from MichaelWkTran/Johann
+    
+    World Asset
+
+commit 77417601a73eb46acf7b6357bf195294571f2d13
+Merge: 19e396d 12ca87a
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 5 21:41:36 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 19e396df9279e7cd690dc379a455514dea5e3d05
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Sun Mar 5 21:41:25 2023 +1300
+
+    world_asset_prefab
+
+commit de9fd4fa92e16a10dc99ed9742950afba609978b
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Sun Mar 5 16:31:10 2023 +1300
+
+    Added Ragdoll to Chaser
+
+commit 2a7d5331edd7b2bd9046c02d4315de6bc0ee28b7
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 4 16:41:47 2023 +1300
+
+    Renaming sound manager + trying to figure out how shaders work in HDRP
+
+commit f2b14f965ab6036b9d0f533078e37312e78f1e96
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sat Mar 4 16:19:33 2023 +1300
+
+    Save before trying to adjust pipeline just in case
+
+commit bdb67bcaa2bfeb758318677850a5e780afcd5ca1
+Merge: a8eeb7a cf27444
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Fri Mar 3 17:55:36 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 12ca87abd5dfdc50577a5c0cdc2e59cdbd3935fd
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Fri Mar 3 17:51:48 2023 +1300
+
+    Added hit collider
+    
+    Enemies can now hit the player though I do not know whether they can damage the player.
+    
+    This code should allow the player to hit the enemies, though I do not want to interfere with others' work unless it may cause merge problems.
+
+commit afccf34d8578db6ed10218f52e3f0af10876d7f1
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 3 16:18:13 2023 +1300
+
+    Updating menu
+
+commit bc11d3e5094f718de79845ec0dbf6e92cb82d686
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 3 16:17:54 2023 +1300
+
+    startingSoundManager
+
+commit 119224efd548b84600e6aeb1a7668a8538b8599a
+Merge: aab55d8 cf27444
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Fri Mar 3 16:03:40 2023 +1300
+
+    Merge branch 'main' into Michael-Tran
+
+commit 87802aa114373f2e89ef7f25eb507aa999956e78
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Mar 3 14:33:08 2023 +1300
+
+    Update Level 2.unity
+
+commit cf27444cf9cb70f9a35c46b2c862b7d924c2758a
+Merge: 3f7eab1 2155866
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Fri Mar 3 12:06:12 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 2155866aef69ec07e89f541416be879ae2d77e9d
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Fri Mar 3 12:05:54 2023 +1300
+
+    Player must charge special attack
+    
+    Added a visual representation of the players special attack charge on the ui
+
+commit cb3d1690d75f5490e5499994ebd6abd2c5d331a7
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Thu Mar 2 18:51:46 2023 +1300
+
+    Updating level layout slightly
+
+commit a26b18c44dff3de2a08eea0f9ff65a1e11dd8e00
+Merge: 1ae03f3 770631b
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Thu Mar 2 17:36:06 2023 +1300
+
+    Merge branch 'Victoria-Branch'
+
+commit 3f7eab173032bf95618d0bbac016326d416acd05
+Merge: c956721 1ae03f3
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Thu Mar 2 17:35:04 2023 +1300
+
+    Merge branch 'main' of https://github.com/MichaelWkTran/GDV310-Prototype-1
+
+commit c956721db2058d032706431d92a44783d1f8f28e
+Merge: 61a9167 f80c221
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Thu Mar 2 17:35:01 2023 +1300
+
+    Merge branch 'Oli-branch'
+
+commit 1ae03f3f5b1aadd7511ac16b5a2ff0e8cfb8732c
+Merge: 3c1f9a5 39dec5a
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Thu Mar 2 12:25:52 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 39dec5a00d62bb996450be2e03667cc0647d46f8
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Thu Mar 2 12:25:39 2023 +1300
+
+    Added crosshair and crosshair hit color change
+
+commit 770631bd84b73fa81bc94b3ca49a6036672c0081
+Merge: 70b3cc7 aab55d8
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Thu Mar 2 11:39:01 2023 +1300
+
+    Merge branch 'Michael-Tran' into Victoria-Branch
+
+commit 70b3cc7240213e2b606faab858c1de3476fa3608
+Merge: 031314a a8eeb7a
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Thu Mar 2 11:37:49 2023 +1300
+
+    Merge branch 'Johann' into Victoria-Branch
+
+commit a8eeb7adca471ac3a2c4bb3e70e79af1515efbeb
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Wed Mar 1 17:25:37 2023 +1300
+
+    level layout #2
+    
+    Applying the Player and map merging
+
+commit 3c1f9a5bd9bf06784278bcdeb52d9826ec903fec
+Merge: 61a9167 fc1b6c4
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Wed Mar 1 12:43:43 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit fc1b6c4a30231cc9b3320658d1f5eefd5ea2ecb8
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Wed Mar 1 12:43:24 2023 +1300
+
+    Added sound effects to the wand attacks
+
+commit f80c221dcde16c32995d713d5c0dff2c97dd3a92
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Tue Feb 28 23:11:30 2023 +1300
+
+    simple drops
+    
+    Added simple drops. Updated player system, timers theoretically work. Untested and unbalanced.
+
+commit 031314ac436cd26b6a0d2cd099641da65b858e2b
+Merge: 2662c4e 61a9167
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Tue Feb 28 17:19:09 2023 +1300
+
+    Merge with Main Fix
+
+commit 61a9167ab43b1900e59ed4c7cad55f6e064c707d
+Merge: 7455bfa 6bc91be
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Tue Feb 28 16:44:02 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 6bc91be9c77c6e154091dd3d2bbbdc7b7ca77df4
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Tue Feb 28 16:43:50 2023 +1300
+
+    Added colliders to wand projectiles
+
+commit 7455bfadcc4472e1a1a80a540b5ff8faba0406e3
+Merge: 6c97a6e 3026213
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Tue Feb 28 16:01:58 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 302621346db4ef62cb05c180e536c9c9a0fd5065
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Tue Feb 28 16:01:42 2023 +1300
+
+    Added basic wand attack and special wand attack
+    
+    Created attacks using particle systems
+
+commit 6c97a6ed029a63518f302c2072647692bb01025e
+Merge: a506b11 13d4da2
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Feb 27 14:04:52 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit 13d4da267c6151466913213def262a0dfae1dcbe
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Feb 27 14:04:33 2023 +1300
+
+    Added sound to dash
+
+commit a506b11fd157b936f342c42a98faf349576cdb53
+Merge: ddd18bc e40d5e3
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Feb 27 13:35:29 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit e40d5e34c7b27bf0240a0d00f71af3bdc06b9fd8
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Feb 27 13:35:18 2023 +1300
+
+    Updated dash ability
+
+commit 2662c4e5e9d50335ff04d657b5cdc04b95843574
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Feb 27 12:45:34 2023 +1300
+
+    Fixing crosshair
+
+commit 1f64ee0179ac87398724a5d70ba414ba039e8558
+Merge: a46259b ddd18bc
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Mon Feb 27 11:46:56 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit ddd18bcc2d81e0dcc3c60f94fd221cc38df321ee
+Merge: f67a7d2 c95b5ff
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Feb 27 11:42:01 2023 +1300
+
+    Merge branch 'Sean's-Branch'
+
+commit c95b5ff4077d949c876595428b1ab8dd3f114ee9
+Author: Sean <88115321+XsDpX16@users.noreply.github.com>
+Date:   Mon Feb 27 11:41:23 2023 +1300
+
+    Player movement and dash
+
+commit f67a7d253638e762e34c0ffd02cd6874799699c6
+Merge: 7f6d918 a523354
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Feb 27 11:36:18 2023 +1300
+
+    Merge pull request #1 from MichaelWkTran/Johann
+    
+    Johann LevelLayoutScene
+
+commit a523354b7d70e997bfdca89d596bc3cfaa98e53a
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Feb 27 11:34:30 2023 +1300
+
+    Update Settings.json
+
+commit fffdd27dc05b32f99da4df1fceea02fd47d54aad
+Merge: 3b22970 7f6d918
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Feb 27 11:34:02 2023 +1300
+
+    Merge branch 'main' into Johann
+
+commit 3b22970471a99fd6f2f42d6b7f2c890b47ca53d2
+Author: ConnicalKitten86 <74589969+ConnicalKitten86@users.noreply.github.com>
+Date:   Mon Feb 27 11:33:52 2023 +1300
+
+    LevelLayoutScene
+
+commit aab55d829f57816f206e7d06ec317e3cf1f9c7f1
+Merge: 45baf05 7f6d918
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Mon Feb 27 10:28:11 2023 +1300
+
+    Merge branch 'main' into Michael-Tran
+
+commit 45baf05707796577ace4ebf3891a930c72f53119
+Merge: bdb8c01 a46259b
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Mon Feb 27 10:24:41 2023 +1300
+
+    Merge branch 'Victoria-Branch' into Michael-Tran
+
+commit bdb8c0148092e7ab007dacd6628ed8dc507a079f
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Mon Feb 27 10:23:40 2023 +1300
+
+    Update Enemy Jump
+
+commit 7f6d918a45378722f710086da2690b6f53b5b7a8
+Author: OliTheVamp <88023081+OliTheVamp@users.noreply.github.com>
+Date:   Mon Feb 27 10:22:15 2023 +1300
+
+    Quick UI
+    
+    I have added a health bar, and placement holders for active weapon.
+    I realized that what we wanted for in game UI was not touched on enough so I am unable to flesh it out more until further discussion with the team
+
+commit a46259b2f8b38682b79132ef29c8fafa41f2ccff
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 22:10:01 2023 +1300
+
+    Comments to clarify how portals work and why certain code is commented out
+
+commit 449ec5cfd278b47b31697cb7a55e5ea3510c8f0c
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 21:52:01 2023 +1300
+
+    Portal should be able to go to hub world
+
+commit 1dc2bc6c0b9a137aa3f3fdd9b554d7e1f9e6949d
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 21:20:07 2023 +1300
+
+    Randomiser searches for correct values
+
+commit fa9d91836dfdfe177c307b5b393c8af2564888a3
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 16:34:01 2023 +1300
+
+    Scene Transition works if level loader in scene
+
+commit 7448f342d765ec522b303ff5ffd4a7962b331f71
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 16:28:07 2023 +1300
+
+    Scene Swap works
+
+commit 31fa9fef864e64de5abd38b80e6de2793cfbd8f4
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 15:16:47 2023 +1300
+
+    Level Hub Setup
+
+commit a5f50191387a3a81cdefd925f13355318aede020
+Merge: 93a73ef 9c1336f
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Sun Feb 26 12:00:00 2023 +1300
+
+    Merge branch 'main' into Victoria-Branch
+
+commit 9c1336f08214e0b35ac40d787c9b3e96236176fd
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Sun Feb 26 00:10:09 2023 +1300
+
+    Made Archers
+
+commit 26d18b4fdec967a0bb34a0c597512cfd3e5bfe80
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Sat Feb 25 20:49:03 2023 +1300
+
+    Created turrets and chaser enemies
+
+commit 93a73ef08edd76fea9a701ea7817da22d9eac008
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Feb 24 16:29:52 2023 +1300
+
+    Organising File Structure
+
+commit fd09d7624a1571fa2e1cf9f190a417370b78a938
+Author: ToriSmash <Victoria.Mckenzie1@mds.ac.nz>
+Date:   Fri Feb 24 16:27:28 2023 +1300
+
+    Basic Menu + Start of Level transitions
+
+commit 34221dc5d16805da6b3796b18e902de963da5c4c
+Author: MichaelWkTran <Michael.wktran@gmail.com>
+Date:   Wed Feb 22 15:05:58 2023 +1300
+
+    Initial commit
