@@ -18,12 +18,12 @@ public class HitCollider : MonoBehaviour
 
     void OnCollisionEnter(Collision _collision)
     {
-        if (_collision.gameObject.isStatic && destroyOnCollision) Destroy(gameObject);
+        if (_collision.gameObject.tag == "Level" && destroyOnCollision) Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider _other)
     {
-        if (_other.gameObject.isStatic && destroyOnCollision) Destroy(gameObject);
+        if (_other.gameObject.tag == "Level" && destroyOnCollision) Destroy(gameObject);
     }
     
     //OnEnter and OnStay returns true when damage should be applied in those states

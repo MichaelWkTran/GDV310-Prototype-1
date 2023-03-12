@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 30785980148511725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1089.2, y: 255.15, z: 3.4525}
-  m_LocalScale: {x: 9.606451, y: 5.013962, z: 1}
+  m_LocalScale: {x: 6, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,9 +101,10 @@ MonoBehaviour:
   starterPortal: 0
   lockedPortal: 1
   fadeEffect: {fileID: 0}
-  locked: {fileID: 2100000, guid: 81988e9e95a606246a7fd052b24fa530, type: 2}
-  unlocked: {fileID: 2100000, guid: f3184f24717aec34dbc337576f52e458, type: 2}
+  lockedMat: {fileID: 2100000, guid: 81988e9e95a606246a7fd052b24fa530, type: 2}
+  unlockedMat: {fileID: 2100000, guid: f3184f24717aec34dbc337576f52e458, type: 2}
   pushbackText: {fileID: 0}
+  congratulationsText: {fileID: 0}
 --- !u!65 &1231275191223485888
 BoxCollider:
   m_ObjectHideFlags: 0

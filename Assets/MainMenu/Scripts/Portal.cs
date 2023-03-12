@@ -14,19 +14,21 @@ public class Portal : MonoBehaviour
     public bool starterPortal;        // Whether a portal is to/from the hub world
     public bool lockedPortal = true;  // If true, the player should not be able to pass through it
 
-    //
+    //An
     public Animator fadeEffect;
     public static float maxFadeTime = 2.0f;
+    public static float fadeTime;
 
-    public Material locked;
-    public Material unlocked;
+    public Material lockedMat;
+    public Material unlockedMat;
     public GameObject pushbackText;
+    public GameObject congratulationsText;
     /// <summary>
     /// Loads
     /// </summary>
     /// <param name="other">The player game object, used for teleporting versions </param>
     /// <returns></returns>
-    IEnumerator LoadLevel(GameObject other, bool preventAccess)
+    IEnumerator LoadLevel(bool preventAccess)
     {
 
         //Need to fade in and out music as well
@@ -40,7 +42,7 @@ public class Portal : MonoBehaviour
 
         if (preventAccess)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (LevelNum >= 1)
@@ -53,11 +55,6 @@ public class Portal : MonoBehaviour
             SceneManager.LoadScene("LevelHub");
         }
 
-    }
-
-    public static void LoadLevel()
-    {
-        SceneManager.LoadScene(1);
     }
     ///If we decide to use a teleport within one scene instead use this code, or remove the transition for a teleporter on the same map
     //transition.SetTrigger("EndWait");
@@ -74,7 +71,7 @@ public class Portal : MonoBehaviour
         lockedPortal = !lockedPortal;
     }
 
-    private void Start()
+    public virtual void Start()
     {
         /// <summary>
         /// Randomiser code for the doors not starting the level
@@ -88,16 +85,17 @@ public class Portal : MonoBehaviour
         ///    LevelNum = 6;
         ///}
         /// </summary>
+        congratulationsText.SetActive(false);
         fadeEffect = GameObject.Find("Image").GetComponent<Animator>(); //Name of loading screen-> animatior fades it in and out between scenes
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
         if (lockedPortal) //Sets the mesh to the corresponding mesh state
         {
-            meshRenderer.material = locked;
+            meshRenderer.material = lockedMat;
         }
         else
         {
-            meshRenderer.material = unlocked;
+            meshRenderer.material = unlockedMat;
         }
 
     }
@@ -108,16 +106,26 @@ public class Portal : MonoBehaviour
         if (other.tag == "MainCamera")
             if (!lockedPortal)
             {
-                StartCoroutine(LoadLevel(other.gameObject, false));
+                StartCoroutine(LoadLevel(false));
             }
             // Since there are portals the player can attempt to enter that lead to nowhere and there's little feedback, added in a transition back to the same scene
             // This only occurs if this is attempted on the initial screen
             else if (starterPortal)
             {
-                StartCoroutine(LoadLevel(other.gameObject, true));
+                StartCoroutine(LoadLevel(true));
             }
     }
 
+    public void LoadLevel()
+    {
+        StartCoroutine(LoadLevel(false));
+    }
+
+    public static void LoadLevelHub()
+    {
+        fadeTime = maxFadeTime;
+
+    }
     /// Levels explored would increment when a player reaches the end of a level and enters another one. Potentially used for difficulty adjustment and affecting room generation
     /// Reset when the player dies or returns to the hub
     /// print(LevelsExplored);

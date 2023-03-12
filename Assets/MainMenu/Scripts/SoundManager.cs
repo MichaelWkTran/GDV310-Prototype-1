@@ -138,7 +138,6 @@ public static class SoundManager
         {
             AudioSource audioSource = sourceObj.AddComponent<AudioSource>();
             AudioAssets.instance.soundsArray[(int)sound].SoundGenerated(audioSource);
-            Debug.Log(audioSource.volume);
             audioSource.PlayOneShot(audioSource.clip);
             GameObject.Destroy(audioSource, AudioAssets.instance.soundsArray[(int)sound].length);
         }
