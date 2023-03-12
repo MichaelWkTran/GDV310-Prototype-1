@@ -37,25 +37,28 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !PauseMenu.isPaused)
+        if (PlayerSystem.pHealth >= 0)
         {
-            m_CursorLocked = !m_CursorLocked;
-            LockCursor();
+            if (Input.GetKeyDown(KeyCode.Tab) && !PauseMenu.isPaused)
+            {
+                m_CursorLocked = !m_CursorLocked;
+                LockCursor();
+            }
+
+            if (!m_CursorLocked)
+            {
+                return;
+            }
+
+            float x = Input.GetAxisRaw("Mouse X");
+            float y = Input.GetAxisRaw("Mouse Y");
+
+            m_Spin += x * m_Sensitivity;
+            m_Tilt -= y * m_Sensitivity;
+
+            m_Tilt = Mathf.Clamp(m_Tilt, m_TiltExtents.x, m_TiltExtents.y);
+
+            transform.localEulerAngles = new Vector3(m_Tilt, m_Spin, 0.0f);
         }
-
-        if (!m_CursorLocked)
-        {
-            return;
-        }
-
-        float x = Input.GetAxisRaw("Mouse X");
-        float y = Input.GetAxisRaw("Mouse Y");
-
-        m_Spin += x * m_Sensitivity;
-        m_Tilt -= y * m_Sensitivity;
-
-        m_Tilt = Mathf.Clamp(m_Tilt, m_TiltExtents.x, m_TiltExtents.y);
-
-        transform.localEulerAngles = new Vector3(m_Tilt, m_Spin, 0.0f);
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerSystem : MonoBehaviour
 {
     //Health Based floats
-    public float pHealth;
+    public static float pHealth;
     public float pMaxHealth = 100.0f;
     public float pMinHealth = 0.0f;
     public bool pDead = false;
@@ -42,10 +42,14 @@ public class PlayerSystem : MonoBehaviour
     public float specialCharge;
     public float specialChargeMax = 100.0f;
 
+    public GameObject deathText;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        deathText.SetActive(false);
+
         specialCharge = 0.0f;
 
         //Sets health to max
@@ -161,11 +165,21 @@ public class PlayerSystem : MonoBehaviour
         if (pHealth <= 0 && !pDead)
         {
             pDead = true;
+            StartCoroutine(DeathTextTimer());
             SoundManager.Play3DSound(SoundManager.Sound.PlayerDie, gameObject);
         }
+        
         if (pDead && !GetComponent<AudioSource>().isPlaying)
         {
+           
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // reload level
         }
+    }
+
+
+    public IEnumerator DeathTextTimer()
+    {
+        deathText.SetActive(true);
+        yield return new WaitForSeconds(1);
     }
 }
