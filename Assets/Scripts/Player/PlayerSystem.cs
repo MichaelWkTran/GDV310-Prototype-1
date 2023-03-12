@@ -11,6 +11,7 @@ public class PlayerSystem : MonoBehaviour
     public float pHealth;
     public float pMaxHealth = 100.0f;
     public float pMinHealth = 0.0f;
+    public bool pDead = false;
     public Slider sliderHealth;
 
     //Weapon Damage Based floats
@@ -85,12 +86,12 @@ public class PlayerSystem : MonoBehaviour
         DMGSlider();
         DashSlider();
 
-        if (pHealth <= 0)  // check whether player has no health
+        if (pHealth <= 0 && !pDead)  // check whether player has no health
         {
+            pDead = true;
             SoundManager.Play3DSound(SoundManager.Sound.PlayerDie, gameObject);
             //StartCoroutine(RestartLevel());
         }
-
 
         //Changes weapon active
         //if (Input.GetMouseButtonDown(0))
@@ -159,10 +160,8 @@ public class PlayerSystem : MonoBehaviour
         pHealth -= value;
     }
 
-
     IEnumerator RestartLevel()
     {
-  
             yield return new WaitForSeconds((int)AudioAssets.instance.soundsArray[5].length);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // reload level
     }
