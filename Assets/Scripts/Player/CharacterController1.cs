@@ -55,7 +55,7 @@ public class CharacterController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if (!PauseMenu.isPaused)
+        if (!PauseMenu.isPaused && PlayerSystem.pHealth >= 0)
         {
             // player movement
 

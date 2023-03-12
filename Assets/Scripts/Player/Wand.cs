@@ -39,13 +39,13 @@ public class Wand : MonoBehaviour
         // player attack
         timer += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && timer > 1)
+        if (Input.GetMouseButtonDown(0) && timer > 1 && PlayerSystem.pHealth >= 0)
         {
             BasicWandAttack();
             timer = 0;
         }
 
-        if (Input.GetMouseButtonDown(1) && Wand.wandCharge == 3)
+        if (Input.GetMouseButtonDown(1) && Wand.wandCharge == 3 && PlayerSystem.pHealth >= 0)
         {
             SpecialWandAttack();
             timer = 0;
