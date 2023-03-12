@@ -179,7 +179,10 @@ public class PlayerSystem : MonoBehaviour
 
     public IEnumerator DeathTextTimer()
     {
-        deathText.SetActive(true);
-        yield return new WaitForSeconds(1);
+        if (SceneManager.GetActiveScene().name == "Week 2 Build")
+        {
+            deathText.SetActive(true);
+            yield return new WaitForSeconds(1);
+        }
     }
 }
