@@ -28,7 +28,7 @@ public class CameraShake : MonoBehaviour
         Vector3 origPosition = transform.position;
         float elapsedTime = 0.0f; 
 
-        while (elapsedTime < time)
+        while (elapsedTime < time && !PauseMenu.isPaused)
         {
             float x = Random.Range(-0.02f, 0.02f) * mag;
             float y = Random.Range(-0.02f, 0.02f) * mag;
