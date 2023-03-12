@@ -12,7 +12,7 @@ public static class SoundManager
     /// </summary>
 
     //Volumes
-    public static float musicVolume = 1f;
+    public static float musicVolume = 0.75f;
     public static float soundVolume = 1f;
     public static float enemyVolume = 1f;
     

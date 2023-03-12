@@ -70,7 +70,7 @@ MonoBehaviour:
     looped: 0
     source: {fileID: 0}
   - name: Dash
-    audioClip: {fileID: 8300000, guid: 481f3d300d307524dba5a6498428d09a, type: 3}
+    audioClip: {fileID: 8300000, guid: 15e2b61c64495954baa78b3b984cd681, type: 3}
     sound: 3
     soundType: 1
     volume: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
     looped: 0
     source: {fileID: 0}
   - name: EnemyDie
-    audioClip: {fileID: 8300000, guid: e73c9041daf7366469f7fb9706909e42, type: 3}
+    audioClip: {fileID: 8300000, guid: 462a73e8a7149fc4ba81866fbd336b18, type: 3}
     sound: 5
     soundType: 2
     volume: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
     looped: 0
     source: {fileID: 0}
   - name: MenuOptionSelected
-    audioClip: {fileID: 8300000, guid: 481f3d300d307524dba5a6498428d09a, type: 3}
+    audioClip: {fileID: 8300000, guid: e5ccbd2980ebf624985401c7336eaa1e, type: 3}
     sound: 7
     soundType: 1
     volume: 0
