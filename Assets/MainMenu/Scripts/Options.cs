@@ -49,6 +49,10 @@ public class Options : MonoBehaviour
                 SoundManager.PlaySound(SoundManager.Sound.EnemyDie, gameObject);
             }
         }
-        GetComponent<AudioSource>().ignoreListenerPause = true;
+        AudioSource source;
+        if (source = GetComponent<AudioSource>())
+        {
+            source.ignoreListenerPause = true;
+        }
     }
 }

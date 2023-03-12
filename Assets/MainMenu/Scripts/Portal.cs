@@ -85,6 +85,7 @@ public class Portal : MonoBehaviour
         ///    LevelNum = 6;
         ///}
         /// </summary>
+        pushbackText.SetActive(false);
         congratulationsText.SetActive(false);
         fadeEffect = GameObject.Find("Image").GetComponent<Animator>(); //Name of loading screen-> animatior fades it in and out between scenes
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();

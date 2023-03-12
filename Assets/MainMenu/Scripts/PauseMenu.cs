@@ -100,12 +100,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (SoundManager.volumeUpdated)
         {
-            //AudioSource[] audioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-            //foreach (obj in audioSources)
-            //{
-
-            //}
-
+         //  AudioSource[] audioSources = Object.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+         //  foreach (obj in audioSources)
+         //  {
+         //
+         //  }
+         //
             SoundManager.volumeUpdated = false;
         }
     }
