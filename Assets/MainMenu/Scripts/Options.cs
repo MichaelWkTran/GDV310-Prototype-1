@@ -6,7 +6,10 @@ using TMPro;
 
 public class Options : MonoBehaviour
 {
-    public Slider musicSlider;
+    /// <summary>
+    /// Class for the options menu 
+    /// </summary>
+    public Slider musicSlider; 
     public Slider soundSlider;
     public Slider enemySlider;
 
@@ -19,6 +22,7 @@ public class Options : MonoBehaviour
 
     private void Update()
     {
+        // Updates the volumes for the different kinds of sounds when the slider is changed 
         if (musicSlider.value != SoundManager.musicVolume)
         {
             SoundManager.MusicVolumeChange(musicSlider.value);
@@ -49,6 +53,7 @@ public class Options : MonoBehaviour
                 SoundManager.PlaySound(SoundManager.Sound.EnemyDie, gameObject);
             }
         }
+        // 
         AudioSource source;
         if (source = GetComponent<AudioSource>())
         {

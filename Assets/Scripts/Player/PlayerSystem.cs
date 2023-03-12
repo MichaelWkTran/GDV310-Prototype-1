@@ -85,14 +85,19 @@ public class PlayerSystem : MonoBehaviour
         DMGSlider();
         DashSlider();
 
-        RestartLevel(); // check whether player has no health
+        if (pHealth <= 0)  // check whether player has no health
+        {
+            SoundManager.Play3DSound(SoundManager.Sound.PlayerDie, gameObject);
+            //StartCoroutine(RestartLevel());
+        }
+
 
         //Changes weapon active
         //if (Input.GetMouseButtonDown(0))
         //{
         //    wandActive = !wandActive;
         //}
-        
+
         //Displays active weapon
         //if (wandActive)
         //{
@@ -104,8 +109,8 @@ public class PlayerSystem : MonoBehaviour
         //    wand.enabled = false;
         //    sword.enabled = true;
         //}
-        
-        if(bTimerDMGBoost > 0.0f)
+
+        if (bTimerDMGBoost > 0.0f)
         {
             mwDamage = mwDamageBoosted;
             rwDamage = rwDamageBoosted;
@@ -155,11 +160,10 @@ public class PlayerSystem : MonoBehaviour
     }
 
 
-    public void RestartLevel()
+    IEnumerator RestartLevel()
     {
-        if (pHealth <= 0)
-        {
-            SceneManager.LoadScene(sceneBuildIndex: 2); // reload level
-        }
+  
+            yield return new WaitForSeconds((int)AudioAssets.instance.soundsArray[5].length);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // reload level
     }
 }

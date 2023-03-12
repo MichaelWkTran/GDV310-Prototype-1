@@ -122,7 +122,21 @@ public static class SoundManager
             Debug.LogError("Music " + music + " can't be found");
         }
     }
-
+    public static void SwapMusic(Music music)
+    {
+        if ((AudioAssets.instance.musicArray.Length > (int)music) && ((int)music >= 0)) //Checks if the music exists 
+        {
+            AudioSource initialSource = musicPlayer.GetComponent<AudioSource>();
+            AudioSource musicSource = musicPlayer.AddComponent<AudioSource>();
+            AudioAssets.instance.musicArray[(int)music].SoundGenerated(musicSource);
+            musicSource.ignoreListenerPause = true;
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogError("Music " + music + " can't be found");
+        }
+    }
 
     /// <summary>
     /// Play a sound without a specific location, mostly for UI + non-diagetic sounds 

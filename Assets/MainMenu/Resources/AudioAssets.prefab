@@ -94,7 +94,7 @@ MonoBehaviour:
     looped: 0
     source: {fileID: 0}
   - name: PlayerDie
-    audioClip: {fileID: 8300000, guid: dbe8d27adec621743bda1dbe6fb8acbd, type: 3}
+    audioClip: {fileID: 8300000, guid: 1fef705d394f21847b9e82fddbe3fc8e, type: 3}
     sound: 6
     soundType: 2
     volume: 0
